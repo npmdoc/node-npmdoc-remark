@@ -1,0 +1,6569 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://remark.js.org">remark (v7.0.0)</a>
+</h1>
+<h4>Markdown processor powered by plugins</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.remark">module remark</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.remark">
+            function <span class="apidocSignatureSpan"></span>remark
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler">
+            function <span class="apidocSignatureSpan">remark.</span>Compiler
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_">
+            function <span class="apidocSignatureSpan">remark.</span>Compiler.super_
+            <span class="apidocSignatureSpan">(tree, file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser">
+            function <span class="apidocSignatureSpan">remark.</span>Parser
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_">
+            function <span class="apidocSignatureSpan">remark.</span>Parser.super_
+            <span class="apidocSignatureSpan">(doc, file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.data">
+            function <span class="apidocSignatureSpan">remark.</span>data
+            <span class="apidocSignatureSpan">(key, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.freeze">
+            function <span class="apidocSignatureSpan">remark.</span>freeze
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.parse">
+            function <span class="apidocSignatureSpan">remark.</span>parse
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.process">
+            function <span class="apidocSignatureSpan">remark.</span>process
+            <span class="apidocSignatureSpan">(doc, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.processSync">
+            function <span class="apidocSignatureSpan">remark.</span>processSync
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.run">
+            function <span class="apidocSignatureSpan">remark.</span>run
+            <span class="apidocSignatureSpan">(node, file, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.runSync">
+            function <span class="apidocSignatureSpan">remark.</span>runSync
+            <span class="apidocSignatureSpan">(node, file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.stringify">
+            function <span class="apidocSignatureSpan">remark.</span>stringify
+            <span class="apidocSignatureSpan">(node, doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.use">
+            function <span class="apidocSignatureSpan">remark.</span>use
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.</span>Compiler.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.</span>Compiler.super_.prototype.visitors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.</span>Parser.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.</span>Parser.super_.prototype.blockTokenizers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.</span>Parser.super_.prototype.inlineTokenizers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.</span>attachers</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.remark.Compiler">module remark.Compiler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.Compiler">
+            function <span class="apidocSignatureSpan">remark.</span>Compiler
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_">
+            function <span class="apidocSignatureSpan">remark.Compiler.</span>super_
+            <span class="apidocSignatureSpan">(tree, file)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.remark.Compiler.super_">module remark.Compiler.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.super_">
+            function <span class="apidocSignatureSpan">remark.Compiler.</span>super_
+            <span class="apidocSignatureSpan">(tree, file)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.remark.Compiler.super_.prototype">module remark.Compiler.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.all">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>all
+            <span class="apidocSignatureSpan">(parent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.block">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>block
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.compile">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>compile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.enterLink">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>enterLink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.enterLinkReference">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>enterLinkReference
+            <span class="apidocSignatureSpan">(compiler, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.enterTable">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>enterTable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.setOptions">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>setOptions
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visit">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>visit
+            <span class="apidocSignatureSpan">(node, parent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitOrderedItems">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>visitOrderedItems
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitUnorderedItems">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>visitUnorderedItems
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>options</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>visitors</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.remark.Compiler.super_.prototype.visitors">module remark.Compiler.super_.prototype.visitors</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.blockquote">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>blockquote
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.break">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>break
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.code">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>code
+            <span class="apidocSignatureSpan">(node, parent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.definition">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>definition
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.delete">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>delete
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.emphasis">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>emphasis
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.footnote">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>footnote
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.footnoteDefinition">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>footnoteDefinition
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.footnoteReference">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>footnoteReference
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.heading">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>heading
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.html">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>html
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.image">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>image
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.imageReference">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>imageReference
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.inlineCode">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>inlineCode
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.link">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>link
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.linkReference">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>linkReference
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.list">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>list
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.listItem">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>listItem
+            <span class="apidocSignatureSpan">(node, parent, position, bullet)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.paragraph">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>paragraph
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.root">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>root
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.strong">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>strong
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.table">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>table
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.tableCell">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>tableCell
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.text">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>text
+            <span class="apidocSignatureSpan">(node, parent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.thematicBreak">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>thematicBreak
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Compiler.super_.prototype.visitors.yaml">
+            function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>yaml
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.remark.Parser">module remark.Parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.Parser">
+            function <span class="apidocSignatureSpan">remark.</span>Parser
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_">
+            function <span class="apidocSignatureSpan">remark.Parser.</span>super_
+            <span class="apidocSignatureSpan">(doc, file)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.remark.Parser.super_">module remark.Parser.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.super_">
+            function <span class="apidocSignatureSpan">remark.Parser.</span>super_
+            <span class="apidocSignatureSpan">(doc, file)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.remark.Parser.super_.prototype">module remark.Parser.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.enterBlock">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>enterBlock
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.enterLink">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>enterLink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.enterList">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>enterList
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.exitStart">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>exitStart
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.parse">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>parse
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.setOptions">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>setOptions
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.tokenizeBlock">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>tokenizeBlock
+            <span class="apidocSignatureSpan">(value, location)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.tokenizeFactory">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>tokenizeFactory
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.tokenizeInline">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>tokenizeInline
+            <span class="apidocSignatureSpan">(value, location)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>blockMethods</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>blockTokenizers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>inlineMethods</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>inlineTokenizers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>interruptBlockquote</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>interruptList</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>interruptParagraph</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>options</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.remark.Parser.super_.prototype.blockTokenizers">module remark.Parser.super_.prototype.blockTokenizers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.atxHeading">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>atxHeading
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.blockquote">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>blockquote
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.definition">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>definition
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.fencedCode">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>fencedCode
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.footnote">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>footnote
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.html">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>html
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.indentedCode">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>indentedCode
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.list">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>list
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.newline">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>newline
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.paragraph">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>paragraph
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.setextHeading">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>setextHeading
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.table">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>table
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.thematicBreak">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>thematicBreak
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.yamlFrontMatter">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>yamlFrontMatter
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.remark.Parser.super_.prototype.inlineTokenizers">module remark.Parser.super_.prototype.inlineTokenizers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.autoLink">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>autoLink
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.break">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>break
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.code">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>code
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.deletion">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>deletion
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.emphasis">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>emphasis
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.escape">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>escape
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.html">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>html
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.link">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>link
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.reference">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>reference
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.strong">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>strong
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.text">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>text
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.url">
+            function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>url
+            <span class="apidocSignatureSpan">(eat, value, silent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.remark" id="apidoc.module.remark">module remark</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.remark.remark" id="apidoc.element.remark.remark">
+        function <span class="apidocSignatureSpan"></span>remark
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function processor() {
+  var destination = unified();
+  var length = attachers.length;
+  var index = -1;
+
+  while (++index &lt; length) {
+    destination.use.apply(null, attachers[index]);
+  }
+
+  destination.data(extend(true, {}, namespace));
+
+  return destination;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler" id="apidoc.element.remark.Compiler">
+        function <span class="apidocSignatureSpan">remark.</span>Compiler
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Of() {
+  if (!(this instanceof Of)) {
+    return new From(arguments);
+  }
+
+  return Super.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_" id="apidoc.element.remark.Compiler.super_">
+        function <span class="apidocSignatureSpan">remark.</span>Compiler.super_
+        <span class="apidocSignatureSpan">(tree, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Compiler(tree, file) {
+  this.inLink = this.inTable = false;
+  this.tree = tree;
+  this.file = file;
+  this.options = xtend(this.options);
+  this.setOptions({});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser" id="apidoc.element.remark.Parser">
+        function <span class="apidocSignatureSpan">remark.</span>Parser
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Of() {
+  if (!(this instanceof Of)) {
+    return new From(arguments);
+  }
+
+  return Super.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_" id="apidoc.element.remark.Parser.super_">
+        function <span class="apidocSignatureSpan">remark.</span>Parser.super_
+        <span class="apidocSignatureSpan">(doc, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Parser(doc, file) {
+  this.file = file;
+  this.offset = {};
+  this.options = xtend(this.options);
+  this.setOptions({});
+
+  this.inList = this.inBlock = this.inLink = false;
+  this.atStart = true;
+
+  this.toOffset = vfileLocation(file).toOffset;
+  this.unescape = unescape(this, 'escape');
+  this.decode = decode(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.data" id="apidoc.element.remark.data">
+        function <span class="apidocSignatureSpan">remark.</span>data
+        <span class="apidocSignatureSpan">(key, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function data(key, value) {
+  if (string(key)) {
+<span class="apidocCodeCommentSpan">    /* Set `key`. */
+</span>    if (arguments.length === 2) {
+      assertUnfrozen('data', frozen);
+
+      namespace[key] = value;
+
+      return processor;
+    }
+
+    /* Get `key`. */
+    return (has(namespace, key) &amp;&amp; namespace[key]) || null;
+  }
+
+  /* Set space. */
+  if (key) {
+    assertUnfrozen('data', frozen);
+    namespace = key;
+    return processor;
+  }
+
+  /* Get space. */
+  return namespace;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.freeze" id="apidoc.element.remark.freeze">
+        function <span class="apidocSignatureSpan">remark.</span>freeze
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function freeze() {
+  var values;
+  var plugin;
+  var options;
+  var transformer;
+
+  if (frozen) {
+    return processor;
+  }
+
+  while (++freezeIndex &lt; attachers.length) {
+    values = attachers[freezeIndex];
+    plugin = values[0];
+    options = values[1];
+    transformer = null;
+
+    if (options === false) {
+      continue;
+    }
+
+    if (options === true) {
+      values[1] = undefined;
+    }
+
+    transformer = plugin.apply(processor, values.slice(1));
+
+    if (func(transformer)) {
+      transformers.use(transformer);
+    }
+  }
+
+  frozen = true;
+  freezeIndex = Infinity;
+
+  return processor;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+'use strict';
+
+var unified = require('unified');
+var parse = require('remark-parse');
+var stringify = require('remark-stringify');
+
+module.exports = unified().use(parse).use(stringify).<span class="apidocCodeKeywordSpan">freeze</span>();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.parse" id="apidoc.element.remark.parse">
+        function <span class="apidocSignatureSpan">remark.</span>parse
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(doc) {
+  var file = vfile(doc);
+  var Parser;
+
+  freeze();
+  Parser = processor.Parser;
+  assertParser('parse', Parser);
+
+  if (newable(Parser)) {
+    return new Parser(String(file), file).parse();
+  }
+
+  return Parser(String(file), file); // eslint-disable-line new-cap
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.process" id="apidoc.element.remark.process">
+        function <span class="apidocSignatureSpan">remark.</span>process
+        <span class="apidocSignatureSpan">(doc, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function process(doc, cb) {
+  freeze();
+  assertParser('process', processor.Parser);
+  assertCompiler('process', processor.Compiler);
+
+  if (!cb) {
+    return new Promise(executor);
+  }
+
+  executor(null, cb);
+
+  function executor(resolve, reject) {
+    var file = vfile(doc);
+
+    pipeline.run(processor, {file: file}, done);
+
+    function done(err) {
+      if (err) {
+        reject(err);
+      } else if (resolve) {
+        resolve(file);
+      } else {
+        cb(null, file);
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var remark = require('remark');
+var lint = require('remark-lint');
+var html = require('remark-html');
+var report = require('vfile-reporter');
+
+remark().use(lint).use(html).<span class="apidocCodeKeywordSpan">process</span>('## Hello world!', function (err, file
+) {
+  console.error(report(err || file));
+  console.log(String(file));
+});
+```
+
+Yields:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.processSync" id="apidoc.element.remark.processSync">
+        function <span class="apidocSignatureSpan">remark.</span>processSync
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function processSync(doc) {
+  var complete = false;
+  var file;
+
+  freeze();
+  assertParser('processSync', processor.Parser);
+  assertCompiler('processSync', processor.Compiler);
+  file = vfile(doc);
+
+  process(file, done);
+
+  assertDone('processSync', 'process', complete);
+
+  return file;
+
+  function done(err) {
+    complete = true;
+    bail(err);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.run" id="apidoc.element.remark.run">
+        function <span class="apidocSignatureSpan">remark.</span>run
+        <span class="apidocSignatureSpan">(node, file, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function run(node, file, cb) {
+  assertNode(node);
+  freeze();
+
+  if (!cb &amp;&amp; func(file)) {
+    cb = file;
+    file = null;
+  }
+
+  if (!cb) {
+    return new Promise(executor);
+  }
+
+  executor(null, cb);
+
+  function executor(resolve, reject) {
+    transformers.run(node, vfile(file), done);
+
+    function done(err, tree, file) {
+      tree = tree || node;
+      if (err) {
+        reject(err);
+      } else if (resolve) {
+        resolve(tree);
+      } else {
+        cb(null, tree, file);
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.runSync" id="apidoc.element.remark.runSync">
+        function <span class="apidocSignatureSpan">remark.</span>runSync
+        <span class="apidocSignatureSpan">(node, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runSync(node, file) {
+  var complete = false;
+  var result;
+
+  run(node, file, done);
+
+  assertDone('runSync', 'run', complete);
+
+  return result;
+
+  function done(err, tree) {
+    complete = true;
+    bail(err);
+    result = tree;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.stringify" id="apidoc.element.remark.stringify">
+        function <span class="apidocSignatureSpan">remark.</span>stringify
+        <span class="apidocSignatureSpan">(node, doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stringify(node, doc) {
+  var file = vfile(doc);
+  var Compiler;
+
+  freeze();
+  Compiler = processor.Compiler;
+  assertCompiler('stringify', Compiler);
+  assertNode(node);
+
+  if (newable(Compiler)) {
+    return new Compiler(node, file).compile();
+  }
+
+  return Compiler(node, file); // eslint-disable-line new-cap
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.use" id="apidoc.element.remark.use">
+        function <span class="apidocSignatureSpan">remark.</span>use
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function use(value) {
+  var settings;
+
+  assertUnfrozen('use', frozen);
+
+  if (value === null || value === undefined) {
+<span class="apidocCodeCommentSpan">    /* Empty */
+</span>  } else if (func(value)) {
+    addPlugin.apply(null, arguments);
+  } else if (typeof value === 'object') {
+    if ('length' in value) {
+      addList(value);
+    } else {
+      addPreset(value);
+    }
+  } else {
+    throw new Error('Expected usable value, not `' + value + '`');
+  }
+
+  if (settings) {
+    namespace.settings = extend(namespace.settings || {}, settings);
+  }
+
+  return processor;
+
+  function addPreset(result) {
+    addList(result.plugins);
+
+    if (result.settings) {
+      settings = extend(settings || {}, result.settings);
+    }
+  }
+
+  function add(value) {
+    if (func(value)) {
+      addPlugin(value);
+    } else if (typeof value === 'object') {
+      if ('length' in value) {
+        addPlugin.apply(null, value);
+      } else {
+        addPreset(value);
+      }
+    } else {
+      throw new Error('Expected usable value, not `' + value + '`');
+    }
+  }
+
+  function addList(plugins) {
+    var length;
+    var index;
+
+    if (plugins === null || plugins === undefined) {
+      /* Empty */
+    } else if (array(plugins)) {
+      length = plugins.length;
+      index = -1;
+
+      while (++index &lt; length) {
+        add(plugins[index]);
+      }
+    } else {
+      throw new Error('Expected a list of plugins, not `' + plugins + '`');
+    }
+  }
+
+  function addPlugin(plugin, value) {
+    var entry = find(plugin);
+
+    if (entry) {
+      if (plain(entry[1]) &amp;&amp; plain(value)) {
+        value = extend(entry[1], value);
+      }
+
+      entry[1] = value;
+    } else {
+      attachers.push(slice.call(arguments));
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+'use strict';
+
+var unified = require('unified');
+var parse = require('remark-parse');
+var stringify = require('remark-stringify');
+
+module.exports = unified().<span class="apidocCodeKeywordSpan">use</span>(parse).use(stringify).freeze();
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.remark.Compiler" id="apidoc.module.remark.Compiler">module remark.Compiler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.Compiler" id="apidoc.element.remark.Compiler.Compiler">
+        function <span class="apidocSignatureSpan">remark.</span>Compiler
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Of() {
+  if (!(this instanceof Of)) {
+    return new From(arguments);
+  }
+
+  return Super.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_" id="apidoc.element.remark.Compiler.super_">
+        function <span class="apidocSignatureSpan">remark.Compiler.</span>super_
+        <span class="apidocSignatureSpan">(tree, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Compiler(tree, file) {
+  this.inLink = this.inTable = false;
+  this.tree = tree;
+  this.file = file;
+  this.options = xtend(this.options);
+  this.setOptions({});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.remark.Compiler.super_" id="apidoc.module.remark.Compiler.super_">module remark.Compiler.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.super_" id="apidoc.element.remark.Compiler.super_.super_">
+        function <span class="apidocSignatureSpan">remark.Compiler.</span>super_
+        <span class="apidocSignatureSpan">(tree, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Compiler(tree, file) {
+  this.inLink = this.inTable = false;
+  this.tree = tree;
+  this.file = file;
+  this.options = xtend(this.options);
+  this.setOptions({});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.remark.Compiler.super_.prototype" id="apidoc.module.remark.Compiler.super_.prototype">module remark.Compiler.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.all" id="apidoc.element.remark.Compiler.super_.prototype.all">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>all
+        <span class="apidocSignatureSpan">(parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function all(parent) {
+  var self = this;
+  var children = parent.children;
+  var length = children.length;
+  var results = [];
+  var index = -1;
+
+  while (++index &lt; length) {
+    results[index] = self.visit(children[index], parent);
+  }
+
+  return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.block" id="apidoc.element.remark.Compiler.super_.prototype.block">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>block
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function block(node) {
+  var self = this;
+  var values = [];
+  var children = node.children;
+  var length = children.length;
+  var index = -1;
+  var child;
+  var prev;
+
+  while (++index &lt; length) {
+    child = children[index];
+
+    if (prev) {
+<span class="apidocCodeCommentSpan">      /* Duplicate nodes, such as a list
+       * directly following another list,
+       * often need multiple new lines.
+       *
+       * Additionally, code blocks following a list
+       * might easily be mistaken for a paragraph
+       * in the list itself. */
+</span>      if (child.type === prev.type &amp;&amp; prev.type === 'list') {
+        values.push(prev.ordered === child.ordered ? '\n\n\n' : '\n\n');
+      } else if (prev.type === 'list' &amp;&amp; child.type === 'code' &amp;&amp; !child.lang) {
+        values.push('\n\n\n');
+      } else {
+        values.push('\n\n');
+      }
+    }
+
+    values.push(self.visit(child, node));
+
+    prev = child;
+  }
+
+  return values.join('');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.compile" id="apidoc.element.remark.Compiler.super_.prototype.compile">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>compile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compile() {
+  return this.visit(compact(this.tree, this.options.commonmark));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.enterLink" id="apidoc.element.remark.Compiler.super_.prototype.enterLink">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>enterLink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enterLink = function () {
+  var context = ctx || this;
+  var current = context[key];
+
+  context[key] = !state;
+
+<span class="apidocCodeCommentSpan">  /**
+   * Cancel state to its value before entering.
+   */
+</span>  return function () {
+    context[key] = current;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.enterLinkReference" id="apidoc.element.remark.Compiler.super_.prototype.enterLinkReference">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>enterLinkReference
+        <span class="apidocSignatureSpan">(compiler, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function enter(compiler, node) {
+  var encode = compiler.encode;
+  var escape = compiler.escape;
+  var exit = compiler.enterLink();
+
+  if (
+    node.referenceType !== 'shortcut' &amp;&amp;
+    node.referenceType !== 'collapsed'
+  ) {
+    return exit;
+  }
+
+  compiler.encode = compiler.escape = returner;
+
+  return function () {
+    compiler.encode = encode;
+    compiler.escape = escape;
+    exit();
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.enterTable" id="apidoc.element.remark.Compiler.super_.prototype.enterTable">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>enterTable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enterTable = function () {
+  var context = ctx || this;
+  var current = context[key];
+
+  context[key] = !state;
+
+<span class="apidocCodeCommentSpan">  /**
+   * Cancel state to its value before entering.
+   */
+</span>  return function () {
+    context[key] = current;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.setOptions" id="apidoc.element.remark.Compiler.super_.prototype.setOptions">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>setOptions
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setOptions(options) {
+  var self = this;
+  var current = self.options;
+  var ruleRepetition;
+  var key;
+
+  if (options == null) {
+    options = {};
+  } else if (typeof options === 'object') {
+    options = xtend(options);
+  } else {
+    throw new Error('Invalid value `' + options + '` for setting `options`');
+  }
+
+  for (key in defaults) {
+    validate[typeof defaults[key]](options, key, current[key], maps[key]);
+  }
+
+  ruleRepetition = options.ruleRepetition;
+
+  if (ruleRepetition &amp;&amp; ruleRepetition &lt; 3) {
+    raise(ruleRepetition, 'options.ruleRepetition');
+  }
+
+  self.encode = encodeFactory(String(options.entities));
+  self.escape = escapeFactory(options);
+
+  self.options = options;
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visit" id="apidoc.element.remark.Compiler.super_.prototype.visit">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>visit
+        <span class="apidocSignatureSpan">(node, parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function one(node, parent) {
+  var self = this;
+  var visitors = self.visitors;
+
+<span class="apidocCodeCommentSpan">  /* Fail on unknown nodes. */
+</span>  if (typeof visitors[node.type] !== 'function') {
+    self.file.fail(
+      new Error(
+        'Missing compiler for node of type `' +
+        node.type + '`: `' + node + '`'
+      ),
+      node
+    );
+  }
+
+  return visitors[node.type].call(self, node, parent);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitOrderedItems" id="apidoc.element.remark.Compiler.super_.prototype.visitOrderedItems">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>visitOrderedItems
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function orderedItems(node) {
+  var self = this;
+  var fn = self.visitors.listItem;
+  var increment = self.options.incrementListMarker;
+  var values = [];
+  var start = node.start;
+  var children = node.children;
+  var length = children.length;
+  var index = -1;
+  var bullet;
+
+  while (++index &lt; length) {
+    bullet = (increment ? start + index : start) + '.';
+    values[index] = fn.call(self, children[index], node, index, bullet);
+  }
+
+  return values.join('\n');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitUnorderedItems" id="apidoc.element.remark.Compiler.super_.prototype.visitUnorderedItems">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.</span>visitUnorderedItems
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unorderedItems(node) {
+  var self = this;
+  var bullet = self.options.bullet;
+  var fn = self.visitors.listItem;
+  var children = node.children;
+  var length = children.length;
+  var index = -1;
+  var values = [];
+
+  while (++index &lt; length) {
+    values[index] = fn.call(self, children[index], node, index, bullet);
+  }
+
+  return values.join('\n');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.remark.Compiler.super_.prototype.visitors" id="apidoc.module.remark.Compiler.super_.prototype.visitors">module remark.Compiler.super_.prototype.visitors</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.blockquote" id="apidoc.element.remark.Compiler.super_.prototype.visitors.blockquote">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>blockquote
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function blockquote(node) {
+  var values = this.block(node).split('\n');
+  var result = [];
+  var length = values.length;
+  var index = -1;
+  var value;
+
+  while (++index &lt; length) {
+    value = values[index];
+    result[index] = (value ? ' ' : '') + value;
+  }
+
+  return '&gt;' + result.join('\n&gt;');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.break" id="apidoc.element.remark.Compiler.super_.prototype.visitors.break">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>break
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lineBreak() {
+  return map[this.options.commonmark];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.code" id="apidoc.element.remark.Compiler.super_.prototype.visitors.code">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>code
+        <span class="apidocSignatureSpan">(node, parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function code(node, parent) {
+  var self = this;
+  var value = node.value;
+  var options = self.options;
+  var marker = options.fence;
+  var language = self.encode(node.lang || '', node);
+  var fence;
+
+<span class="apidocCodeCommentSpan">  /* Without (needed) fences. */
+</span>  if (!language &amp;&amp; !options.fences &amp;&amp; value) {
+    /* Throw when pedantic, in a list item which
+     * isnâ€™t compiled using a tab. */
+    if (
+      parent &amp;&amp;
+      parent.type === 'listItem' &amp;&amp;
+      options.listItemIndent !== 'tab' &amp;&amp;
+      options.pedantic
+    ) {
+      self.file.fail(
+        'Cannot indent code properly. See http://git.io/vgFvT',
+        node.position
+      );
+    }
+
+    return pad(value, 1);
+  }
+
+  fence = streak(value, marker) + 1;
+
+  /* Fix GFM / RedCarpet bug, where fence-like characters
+   * inside fenced code can exit a code-block.
+   * Yes, even when the outer fence uses different
+   * characters, or is longer.
+   * Thus, we can only pad the code to make it work. */
+  if (FENCE.test(value)) {
+    value = pad(value, 1);
+  }
+
+  fence = repeat(marker, Math.max(fence, 3));
+
+  return fence + language + '\n' + value + '\n' + fence;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.definition" id="apidoc.element.remark.Compiler.super_.prototype.visitors.definition">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>definition
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function definition(node) {
+  var content = uri(node.url);
+
+  if (node.title) {
+    content += ' ' + title(node.title);
+  }
+
+  return '[' + node.identifier + ']: ' + content;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.delete" id="apidoc.element.remark.Compiler.super_.prototype.visitors.delete">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>delete
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function strikethrough(node) {
+  return '~~' + this.all(node).join('') + '~~';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.emphasis" id="apidoc.element.remark.Compiler.super_.prototype.visitors.emphasis">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>emphasis
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emphasis(node) {
+  var marker = this.options.emphasis;
+  return marker + this.all(node).join('') + marker;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.footnote" id="apidoc.element.remark.Compiler.super_.prototype.visitors.footnote">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>footnote
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function footnote(node) {
+  return '[^' + this.all(node).join('') + ']';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.footnoteDefinition" id="apidoc.element.remark.Compiler.super_.prototype.visitors.footnoteDefinition">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>footnoteDefinition
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function footnoteDefinition(node) {
+  var id = node.identifier.toLowerCase();
+  var content = this.all(node).join('\n\n' + repeat(' ', 4));
+
+  return '[^' + id + ']: ' + content;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.footnoteReference" id="apidoc.element.remark.Compiler.super_.prototype.visitors.footnoteReference">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>footnoteReference
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function footnoteReference(node) {
+  return '[^' + node.identifier + ']';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.heading" id="apidoc.element.remark.Compiler.super_.prototype.visitors.heading">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>heading
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function heading(node) {
+  var self = this;
+  var depth = node.depth;
+  var setext = self.options.setext;
+  var closeAtx = self.options.closeAtx;
+  var content = self.all(node).join('');
+  var prefix;
+
+  if (setext &amp;&amp; depth &lt; 3) {
+    return content + '\n' + repeat(depth === 1 ? '=' : '-', content.length);
+  }
+
+  prefix = repeat('#', node.depth);
+
+  return prefix + ' ' + content + (closeAtx ? ' ' + prefix : '');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.html" id="apidoc.element.remark.Compiler.super_.prototype.visitors.html">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>html
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function html(node) {
+  return node.value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.image" id="apidoc.element.remark.Compiler.super_.prototype.visitors.image">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>image
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function image(node) {
+  var self = this;
+  var content = uri(self.encode(node.url || '', node));
+  var exit = self.enterLink();
+  var alt = self.encode(self.escape(node.alt || '', node));
+
+  exit();
+
+  if (node.title) {
+    content += ' ' + title(self.encode(node.title, node));
+  }
+
+  return '![' + alt + '](' + content + ')';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.imageReference" id="apidoc.element.remark.Compiler.super_.prototype.visitors.imageReference">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>imageReference
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function imageReference(node) {
+  return '![' + (this.encode(node.alt, node) || '') + ']' + label(node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.inlineCode" id="apidoc.element.remark.Compiler.super_.prototype.visitors.inlineCode">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>inlineCode
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function inlineCode(node) {
+  var value = node.value;
+  var ticks = repeat('`', streak(value, '`') + 1);
+  var start = ticks;
+  var end = ticks;
+
+  if (value.charAt(0) === '`') {
+    start += ' ';
+  }
+
+  if (value.charAt(value.length - 1) === '`') {
+    end = ' ' + end;
+  }
+
+  return start + value + end;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.link" id="apidoc.element.remark.Compiler.super_.prototype.visitors.link">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>link
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function link(node) {
+  var self = this;
+  var content = self.encode(node.url || '', node);
+  var exit = self.enterLink();
+  var escaped = self.encode(self.escape(node.url || '', node));
+  var value = self.all(node).join('');
+
+  exit();
+
+  if (
+    node.title == null &amp;&amp;
+    PROTOCOL.test(content) &amp;&amp;
+    (escaped === value || escaped === 'mailto:' + value)
+  ) {
+<span class="apidocCodeCommentSpan">    /* Backslash escapes do not work in autolinks,
+     * so we do not escape. */
+</span>    return uri(self.encode(node.url), true);
+  }
+
+  content = uri(content);
+
+  if (node.title) {
+    content += ' ' + title(self.encode(self.escape(node.title, node), node));
+  }
+
+  return '[' + value + '](' + content + ')';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.linkReference" id="apidoc.element.remark.Compiler.super_.prototype.visitors.linkReference">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>linkReference
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function linkReference(node) {
+  var self = this;
+  var type = node.referenceType;
+  var exit = self.enterLinkReference(self, node);
+  var value = self.all(node).join('');
+
+  exit();
+
+  if (type === 'shortcut' || type === 'collapsed') {
+    value = copy(value, node.identifier);
+  }
+
+  return '[' + value + ']' + label(node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.list" id="apidoc.element.remark.Compiler.super_.prototype.visitors.list">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>list
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function list(node) {
+  return this[ORDERED_MAP[node.ordered]](node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.listItem" id="apidoc.element.remark.Compiler.super_.prototype.visitors.listItem">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>listItem
+        <span class="apidocSignatureSpan">(node, parent, position, bullet)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function listItem(node, parent, position, bullet) {
+  var self = this;
+  var style = self.options.listItemIndent;
+  var loose = node.loose;
+  var children = node.children;
+  var length = children.length;
+  var values = [];
+  var index = -1;
+  var value;
+  var indent;
+  var spacing;
+
+  while (++index &lt; length) {
+    values[index] = self.visit(children[index], node);
+  }
+
+  value = CHECKBOX_MAP[node.checked] + values.join(loose ? '\n\n' : '\n');
+
+  if (style === '1' || (style === 'mixed' &amp;&amp; value.indexOf('\n') === -1)) {
+    indent = bullet.length + 1;
+    spacing = ' ';
+  } else {
+    indent = Math.ceil((bullet.length + 1) / 4) * 4;
+    spacing = repeat(' ', indent - bullet.length);
+  }
+
+  value = bullet + spacing + pad(value, indent / 4).slice(indent);
+
+  if (loose &amp;&amp; parent.children.length - 1 !== position) {
+    value += '\n';
+  }
+
+  return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.paragraph" id="apidoc.element.remark.Compiler.super_.prototype.visitors.paragraph">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>paragraph
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function paragraph(node) {
+  return this.all(node).join('');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.root" id="apidoc.element.remark.Compiler.super_.prototype.visitors.root">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>root
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function root(node) {
+  return this.block(node) + '\n';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.strong" id="apidoc.element.remark.Compiler.super_.prototype.visitors.strong">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>strong
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function strong(node) {
+  var marker = repeat(this.options.strong, 2);
+  return marker + this.all(node).join('') + marker;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.table" id="apidoc.element.remark.Compiler.super_.prototype.visitors.table">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>table
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function table(node) {
+  var self = this;
+  var loose = self.options.looseTable;
+  var spaced = self.options.spacedTable;
+  var pad = self.options.paddedTable;
+  var rows = node.children;
+  var index = rows.length;
+  var exit = self.enterTable();
+  var result = [];
+  var start;
+  var end;
+
+  while (index--) {
+    result[index] = self.all(rows[index]);
+  }
+
+  exit();
+
+  if (loose) {
+    start = end = '';
+  } else if (spaced) {
+    start = '| ';
+    end = ' |';
+  } else {
+    start = end = '|';
+  }
+
+  return markdownTable(result, {
+    align: node.align,
+    pad: pad,
+    start: start,
+    end: end,
+    delimiter: spaced ? ' | ' : '|'
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.tableCell" id="apidoc.element.remark.Compiler.super_.prototype.visitors.tableCell">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>tableCell
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tableCell(node) {
+  return this.all(node).join('');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.text" id="apidoc.element.remark.Compiler.super_.prototype.visitors.text">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>text
+        <span class="apidocSignatureSpan">(node, parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function text(node, parent) {
+  return this.encode(this.escape(node.value, node, parent), node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.thematicBreak" id="apidoc.element.remark.Compiler.super_.prototype.visitors.thematicBreak">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>thematicBreak
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function thematic() {
+  var options = this.options;
+  var rule = repeat(options.rule, options.ruleRepetition);
+  return options.ruleSpaces ? rule.split('').join(' ') : rule;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Compiler.super_.prototype.visitors.yaml" id="apidoc.element.remark.Compiler.super_.prototype.visitors.yaml">
+        function <span class="apidocSignatureSpan">remark.Compiler.super_.prototype.visitors.</span>yaml
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function yaml(node) {
+  var marker = repeat('-', 3);
+  return marker + (node.value ? '\n' + node.value : '') + '\n' + marker;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.remark.Parser" id="apidoc.module.remark.Parser">module remark.Parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.Parser" id="apidoc.element.remark.Parser.Parser">
+        function <span class="apidocSignatureSpan">remark.</span>Parser
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Of() {
+  if (!(this instanceof Of)) {
+    return new From(arguments);
+  }
+
+  return Super.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_" id="apidoc.element.remark.Parser.super_">
+        function <span class="apidocSignatureSpan">remark.Parser.</span>super_
+        <span class="apidocSignatureSpan">(doc, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Parser(doc, file) {
+  this.file = file;
+  this.offset = {};
+  this.options = xtend(this.options);
+  this.setOptions({});
+
+  this.inList = this.inBlock = this.inLink = false;
+  this.atStart = true;
+
+  this.toOffset = vfileLocation(file).toOffset;
+  this.unescape = unescape(this, 'escape');
+  this.decode = decode(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.remark.Parser.super_" id="apidoc.module.remark.Parser.super_">module remark.Parser.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.super_" id="apidoc.element.remark.Parser.super_.super_">
+        function <span class="apidocSignatureSpan">remark.Parser.</span>super_
+        <span class="apidocSignatureSpan">(doc, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Parser(doc, file) {
+  this.file = file;
+  this.offset = {};
+  this.options = xtend(this.options);
+  this.setOptions({});
+
+  this.inList = this.inBlock = this.inLink = false;
+  this.atStart = true;
+
+  this.toOffset = vfileLocation(file).toOffset;
+  this.unescape = unescape(this, 'escape');
+  this.decode = decode(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.remark.Parser.super_.prototype" id="apidoc.module.remark.Parser.super_.prototype">module remark.Parser.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.enterBlock" id="apidoc.element.remark.Parser.super_.prototype.enterBlock">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>enterBlock
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enterBlock = function () {
+  var context = ctx || this;
+  var current = context[key];
+
+  context[key] = !state;
+
+<span class="apidocCodeCommentSpan">  /**
+   * Cancel state to its value before entering.
+   */
+</span>  return function () {
+    context[key] = current;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.enterLink" id="apidoc.element.remark.Parser.super_.prototype.enterLink">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>enterLink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enterLink = function () {
+  var context = ctx || this;
+  var current = context[key];
+
+  context[key] = !state;
+
+<span class="apidocCodeCommentSpan">  /**
+   * Cancel state to its value before entering.
+   */
+</span>  return function () {
+    context[key] = current;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.enterList" id="apidoc.element.remark.Parser.super_.prototype.enterList">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>enterList
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enterList = function () {
+  var context = ctx || this;
+  var current = context[key];
+
+  context[key] = !state;
+
+<span class="apidocCodeCommentSpan">  /**
+   * Cancel state to its value before entering.
+   */
+</span>  return function () {
+    context[key] = current;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.exitStart" id="apidoc.element.remark.Parser.super_.prototype.exitStart">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>exitStart
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exitStart = function () {
+  var context = ctx || this;
+  var current = context[key];
+
+  context[key] = !state;
+
+<span class="apidocCodeCommentSpan">  /**
+   * Cancel state to its value before entering.
+   */
+</span>  return function () {
+    context[key] = current;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.parse" id="apidoc.element.remark.Parser.super_.prototype.parse">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>parse
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse() {
+  var self = this;
+  var value = String(self.file);
+  var start = {line: 1, column: 1, offset: 0};
+  var content = xtend(start);
+  var node;
+
+<span class="apidocCodeCommentSpan">  /* Clean non-unix newlines: `\r\n` and `\r` are all
+   * changed to `\n`.  This should not affect positional
+   * information. */
+</span>  value = value.replace(EXPRESSION_LINE_BREAKS, C_NEWLINE);
+
+  if (value.charCodeAt(0) === 0xFEFF) {
+    value = value.slice(1);
+
+    content.column++;
+    content.offset++;
+  }
+
+  node = {
+    type: 'root',
+    children: self.tokenizeBlock(value, content),
+    position: {
+      start: start,
+      end: self.eof || xtend(start)
+    }
+  };
+
+  if (!self.options.position) {
+    removePosition(node, true);
+  }
+
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.setOptions" id="apidoc.element.remark.Parser.super_.prototype.setOptions">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>setOptions
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setOptions(options) {
+  var self = this;
+  var current = self.options;
+  var key;
+  var value;
+
+  if (options == null) {
+    options = {};
+  } else if (typeof options === 'object') {
+    options = xtend(options);
+  } else {
+    throw new Error(
+      'Invalid value `' + options + '` ' +
+      'for setting `options`'
+    );
+  }
+
+  for (key in defaults) {
+    value = options[key];
+
+    if (value == null) {
+      value = current[key];
+    }
+
+    if (
+      (key !== 'blocks' &amp;&amp; typeof value !== 'boolean') ||
+      (key === 'blocks' &amp;&amp; typeof value !== 'object')
+    ) {
+      throw new Error(
+        'Invalid value `' + value + '` ' +
+        'for setting `options.' + key + '`'
+      );
+    }
+
+    options[key] = value;
+  }
+
+  self.options = options;
+  self.escape = escapes(options);
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.tokenizeBlock" id="apidoc.element.remark.Parser.super_.prototype.tokenizeBlock">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>tokenizeBlock
+        <span class="apidocSignatureSpan">(value, location)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tokenize(value, location) {
+  var self = this;
+  var offset = self.offset;
+  var tokens = [];
+  var methods = self[type + 'Methods'];
+  var tokenizers = self[type + 'Tokenizers'];
+  var line = location.line;
+  var column = location.column;
+  var index;
+  var length;
+  var method;
+  var name;
+  var matched;
+  var valueLength;
+
+<span class="apidocCodeCommentSpan">  /* Trim white space only lines. */
+</span>  if (!value) {
+    return tokens;
+  }
+
+  /* Expose on `eat`. */
+  eat.now = now;
+  eat.file = self.file;
+
+  /* Sync initial offset. */
+  updatePosition('');
+
+  /* Iterate over `value`, and iterate over all
+   * tokenizers.  When one eats something, re-iterate
+   * with the remaining value.  If no tokenizer eats,
+   * something failed (should not happen) and an
+   * exception is thrown. */
+  while (value) {
+    index = -1;
+    length = methods.length;
+    matched = false;
+
+    while (++index &lt; length) {
+      name = methods[index];
+      method = tokenizers[name];
+
+      if (
+        method &amp;&amp;
+        (!method.onlyAtStart || self.atStart) &amp;&amp;
+        (!method.notInList || !self.inList) &amp;&amp;
+        (!method.notInBlock || !self.inBlock) &amp;&amp;
+        (!method.notInLink || !self.inLink)
+      ) {
+        valueLength = value.length;
+
+        method.apply(self, [eat, value]);
+
+        matched = valueLength !== value.length;
+
+        if (matched) {
+          break;
+        }
+      }
+    }
+
+    /* istanbul ignore if */
+    if (!matched) {
+      self.file.fail(new Error('Infinite loop'), eat.now());
+    }
+  }
+
+  self.eof = now();
+
+  return tokens;
+
+  /**
+   * Update line, column, and offset based on
+   * `value`.
+   *
+   * @example
+   *   updatePosition('foo');
+   *
+   * @param {string} subvalue - Subvalue to eat.
+   */
+  function updatePosition(subvalue) {
+    var lastIndex = -1;
+    var index = subvalue.indexOf('\n');
+
+    while (index !== -1) {
+      line++;
+      lastIndex = index;
+      index = subvalue.indexOf('\n', index + 1);
+    }
+
+    if (lastIndex === -1) {
+      column += subvalue.length;
+    } else {
+      column = subvalue.length - lastIndex;
+    }
+
+    if (line in offset) {
+      if (lastIndex !== -1) {
+        column += offset[line];
+      } else if (column &lt;= offset[line]) {
+        column = offset[line] + 1;
+      }
+    }
+  }
+
+  /**
+   * Get offset.  Called before the first character is
+   * eaten to retrieve the range's offsets.
+   *
+   * @return {Function} - `done`, to be called when
+   *   the last character is eaten.
+   */
+  function getOffset() {
+    var indentation = [];
+    var pos = line + 1;
+
+    /**
+     * Done.  Called when the last character is
+     * eaten to retrieve the rangeâ€™s offsets.
+     *
+     * @return {Array.&lt;number&gt;} - Offset.
+     */
+    return function () {
+      var last = line + 1;
+
+      while (pos &lt; last) {
+        indentation.push((offset[pos] || 0) + 1);
+
+        pos++;
+      }
+
+      return indentation;
+    };
+  }
+
+  /**
+   * Get the current position.
+   *
+   * @example
+   *   position = now(); // {line: 1, column: 1, offset: 0}
+   *
+   * @return {Object} - Current Position.
+   */
+  function now() {
+    var pos = {line: line, column: column};
+
+    pos.offset = self.toOffset(pos);
+
+    return pos;
+  }
+
+  /**
+   * Store position information for a node.
+   *
+   * @example
+   *   start = now();
+   *   updatePosition('foo');
+   *   location = new Position(start);
+   *   // {
+   *   //   start: {line: 1, column: 1, offset: 0},
+   *   //   end: {line: 1, column: 3, offset: 2}
+   *   // }
+   *
+   * @param {Object} start - Starting position.
+   */
+  function Position(start) {
+    this.start = start;
+    this.end = now();
+  }
+
+  /**
+   * Throw when a value is incorrectly eaten.
+   * This shouldnâ€™t happen but will throw on new,
+   * incorrect rules.
+   *
+   * @example
+   *   // When the current value is set to `foo bar`.
+   *   validateEat('foo');
+   *   eat('foo');
+   *
+   *   validateEat('bar');
+   *   // throws, because the space is not eaten.
+   *
+   * @param {string} subvalue - Value to be eaten.
+   * @throws {Error} - When `subvalue` cannot be eaten.
+   */
+  function validateEat(subvalue) {
+    /* istanbul ignore if */ ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.tokenizeFactory" id="apidoc.element.remark.Parser.super_.prototype.tokenizeFactory">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>tokenizeFactory
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function factory(type) {
+  return tokenize;
+
+<span class="apidocCodeCommentSpan">  /* Tokenizer for a bound `type`. */
+</span>  function tokenize(value, location) {
+    var self = this;
+    var offset = self.offset;
+    var tokens = [];
+    var methods = self[type + 'Methods'];
+    var tokenizers = self[type + 'Tokenizers'];
+    var line = location.line;
+    var column = location.column;
+    var index;
+    var length;
+    var method;
+    var name;
+    var matched;
+    var valueLength;
+
+    /* Trim white space only lines. */
+    if (!value) {
+      return tokens;
+    }
+
+    /* Expose on `eat`. */
+    eat.now = now;
+    eat.file = self.file;
+
+    /* Sync initial offset. */
+    updatePosition('');
+
+    /* Iterate over `value`, and iterate over all
+     * tokenizers.  When one eats something, re-iterate
+     * with the remaining value.  If no tokenizer eats,
+     * something failed (should not happen) and an
+     * exception is thrown. */
+    while (value) {
+      index = -1;
+      length = methods.length;
+      matched = false;
+
+      while (++index &lt; length) {
+        name = methods[index];
+        method = tokenizers[name];
+
+        if (
+          method &amp;&amp;
+          (!method.onlyAtStart || self.atStart) &amp;&amp;
+          (!method.notInList || !self.inList) &amp;&amp;
+          (!method.notInBlock || !self.inBlock) &amp;&amp;
+          (!method.notInLink || !self.inLink)
+        ) {
+          valueLength = value.length;
+
+          method.apply(self, [eat, value]);
+
+          matched = valueLength !== value.length;
+
+          if (matched) {
+            break;
+          }
+        }
+      }
+
+      /* istanbul ignore if */
+      if (!matched) {
+        self.file.fail(new Error('Infinite loop'), eat.now());
+      }
+    }
+
+    self.eof = now();
+
+    return tokens;
+
+    /**
+     * Update line, column, and offset based on
+     * `value`.
+     *
+     * @example
+     *   updatePosition('foo');
+     *
+     * @param {string} subvalue - Subvalue to eat.
+     */
+    function updatePosition(subvalue) {
+      var lastIndex = -1;
+      var index = subvalue.indexOf('\n');
+
+      while (index !== -1) {
+        line++;
+        lastIndex = index;
+        index = subvalue.indexOf('\n', index + 1);
+      }
+
+      if (lastIndex === -1) {
+        column += subvalue.length;
+      } else {
+        column = subvalue.length - lastIndex;
+      }
+
+      if (line in offset) {
+        if (lastIndex !== -1) {
+          column += offset[line];
+        } else if (column &lt;= offset[line]) {
+          column = offset[line] + 1;
+        }
+      }
+    }
+
+    /**
+     * Get offset.  Called before the first character is
+     * eaten to retrieve the range's offsets.
+     *
+     * @return {Function} - `done`, to be called when
+     *   the last character is eaten.
+     */
+    function getOffset() {
+      var indentation = [];
+      var pos = line + 1;
+
+      /**
+       * Done.  Called when the last character is
+       * eaten to retrieve the rangeâ€™s offsets.
+       *
+       * @return {Array.&lt;number&gt;} - Offset.
+       */
+      return function () {
+        var last = line + 1;
+
+        while (pos &lt; last) {
+          indentation.push((offset[pos] || 0) + 1);
+
+          pos++;
+        }
+
+        return indentation;
+      };
+    }
+
+    /**
+     * Get the current position.
+     *
+     * @example
+     *   position = now(); // {line: 1, column: 1, offset: 0}
+     *
+     * @return {Object} - Current Position.
+     */
+    function now() {
+      var pos = {line: line, column: column};
+
+      pos.offset = self.toOffset(pos);
+
+      return pos;
+    }
+
+    /**
+     * Store position information for a node.
+     *
+     * @example
+     *   start = now();
+     *   updatePosition('foo');
+     *   location = new Position(start);
+     *   // {
+     *   //   start: {line: 1, column: 1, offset: 0},
+     *   //   end: {line: 1, column: 3, offset: 2}
+     *   // }
+     *
+     * @param {Object} start - Starting position.
+     */
+    function Position(start) {
+      this.start = start;
+      this.end = now();
+    }
+
+    /**
+     * Throw when a value is incorrectly eaten.
+     * This shouldnâ€™t happen but will throw on new,
+     * incorrect rules.
+     * ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.tokenizeInline" id="apidoc.element.remark.Parser.super_.prototype.tokenizeInline">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.</span>tokenizeInline
+        <span class="apidocSignatureSpan">(value, location)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tokenize(value, location) {
+  var self = this;
+  var offset = self.offset;
+  var tokens = [];
+  var methods = self[type + 'Methods'];
+  var tokenizers = self[type + 'Tokenizers'];
+  var line = location.line;
+  var column = location.column;
+  var index;
+  var length;
+  var method;
+  var name;
+  var matched;
+  var valueLength;
+
+<span class="apidocCodeCommentSpan">  /* Trim white space only lines. */
+</span>  if (!value) {
+    return tokens;
+  }
+
+  /* Expose on `eat`. */
+  eat.now = now;
+  eat.file = self.file;
+
+  /* Sync initial offset. */
+  updatePosition('');
+
+  /* Iterate over `value`, and iterate over all
+   * tokenizers.  When one eats something, re-iterate
+   * with the remaining value.  If no tokenizer eats,
+   * something failed (should not happen) and an
+   * exception is thrown. */
+  while (value) {
+    index = -1;
+    length = methods.length;
+    matched = false;
+
+    while (++index &lt; length) {
+      name = methods[index];
+      method = tokenizers[name];
+
+      if (
+        method &amp;&amp;
+        (!method.onlyAtStart || self.atStart) &amp;&amp;
+        (!method.notInList || !self.inList) &amp;&amp;
+        (!method.notInBlock || !self.inBlock) &amp;&amp;
+        (!method.notInLink || !self.inLink)
+      ) {
+        valueLength = value.length;
+
+        method.apply(self, [eat, value]);
+
+        matched = valueLength !== value.length;
+
+        if (matched) {
+          break;
+        }
+      }
+    }
+
+    /* istanbul ignore if */
+    if (!matched) {
+      self.file.fail(new Error('Infinite loop'), eat.now());
+    }
+  }
+
+  self.eof = now();
+
+  return tokens;
+
+  /**
+   * Update line, column, and offset based on
+   * `value`.
+   *
+   * @example
+   *   updatePosition('foo');
+   *
+   * @param {string} subvalue - Subvalue to eat.
+   */
+  function updatePosition(subvalue) {
+    var lastIndex = -1;
+    var index = subvalue.indexOf('\n');
+
+    while (index !== -1) {
+      line++;
+      lastIndex = index;
+      index = subvalue.indexOf('\n', index + 1);
+    }
+
+    if (lastIndex === -1) {
+      column += subvalue.length;
+    } else {
+      column = subvalue.length - lastIndex;
+    }
+
+    if (line in offset) {
+      if (lastIndex !== -1) {
+        column += offset[line];
+      } else if (column &lt;= offset[line]) {
+        column = offset[line] + 1;
+      }
+    }
+  }
+
+  /**
+   * Get offset.  Called before the first character is
+   * eaten to retrieve the range's offsets.
+   *
+   * @return {Function} - `done`, to be called when
+   *   the last character is eaten.
+   */
+  function getOffset() {
+    var indentation = [];
+    var pos = line + 1;
+
+    /**
+     * Done.  Called when the last character is
+     * eaten to retrieve the rangeâ€™s offsets.
+     *
+     * @return {Array.&lt;number&gt;} - Offset.
+     */
+    return function () {
+      var last = line + 1;
+
+      while (pos &lt; last) {
+        indentation.push((offset[pos] || 0) + 1);
+
+        pos++;
+      }
+
+      return indentation;
+    };
+  }
+
+  /**
+   * Get the current position.
+   *
+   * @example
+   *   position = now(); // {line: 1, column: 1, offset: 0}
+   *
+   * @return {Object} - Current Position.
+   */
+  function now() {
+    var pos = {line: line, column: column};
+
+    pos.offset = self.toOffset(pos);
+
+    return pos;
+  }
+
+  /**
+   * Store position information for a node.
+   *
+   * @example
+   *   start = now();
+   *   updatePosition('foo');
+   *   location = new Position(start);
+   *   // {
+   *   //   start: {line: 1, column: 1, offset: 0},
+   *   //   end: {line: 1, column: 3, offset: 2}
+   *   // }
+   *
+   * @param {Object} start - Starting position.
+   */
+  function Position(start) {
+    this.start = start;
+    this.end = now();
+  }
+
+  /**
+   * Throw when a value is incorrectly eaten.
+   * This shouldnâ€™t happen but will throw on new,
+   * incorrect rules.
+   *
+   * @example
+   *   // When the current value is set to `foo bar`.
+   *   validateEat('foo');
+   *   eat('foo');
+   *
+   *   validateEat('bar');
+   *   // throws, because the space is not eaten.
+   *
+   * @param {string} subvalue - Value to be eaten.
+   * @throws {Error} - When `subvalue` cannot be eaten.
+   */
+  function validateEat(subvalue) {
+    /* istanbul ignore if */ ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.remark.Parser.super_.prototype.blockTokenizers" id="apidoc.module.remark.Parser.super_.prototype.blockTokenizers">module remark.Parser.super_.prototype.blockTokenizers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.atxHeading" id="apidoc.element.remark.Parser.super_.prototype.blockTokenizers.atxHeading">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>atxHeading
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function atxHeading(eat, value, silent) {
+  var self = this;
+  var settings = self.options;
+  var length = value.length + 1;
+  var index = -1;
+  var now = eat.now();
+  var subvalue = '';
+  var content = '';
+  var character;
+  var queue;
+  var depth;
+
+<span class="apidocCodeCommentSpan">  /* Eat initial spacing. */
+</span>  while (++index &lt; length) {
+    character = value.charAt(index);
+
+    if (character !== C_SPACE &amp;&amp; character !== C_TAB) {
+      index--;
+      break;
+    }
+
+    subvalue += character;
+  }
+
+  /* Eat hashes. */
+  depth = 0;
+
+  while (++index &lt;= length) {
+    character = value.charAt(index);
+
+    if (character !== C_HASH) {
+      index--;
+      break;
+    }
+
+    subvalue += character;
+    depth++;
+  }
+
+  if (depth &gt; MAX_ATX_COUNT) {
+    return;
+  }
+
+  if (
+    !depth ||
+    (!settings.pedantic &amp;&amp; value.charAt(index + 1) === C_HASH)
+  ) {
+    return;
+  }
+
+  length = value.length + 1;
+
+  /* Eat intermediate white-space. */
+  queue = '';
+
+  while (++index &lt; length) {
+    character = value.charAt(index);
+
+    if (character !== C_SPACE &amp;&amp; character !== C_TAB) {
+      index--;
+      break;
+    }
+
+    queue += character;
+  }
+
+  /* Exit when not in pedantic mode without spacing. */
+  if (
+    !settings.pedantic &amp;&amp;
+    queue.length === 0 &amp;&amp;
+    character &amp;&amp;
+    character !== C_NEWLINE
+  ) {
+    return;
+  }
+
+  if (silent) {
+    return true;
+  }
+
+  /* Eat content. */
+  subvalue += queue;
+  queue = content = '';
+
+  while (++index &lt; length) {
+    character = value.charAt(index);
+
+    if (!character || character === C_NEWLINE) {
+      break;
+    }
+
+    if (
+      character !== C_SPACE &amp;&amp;
+      character !== C_TAB &amp;&amp;
+      character !== C_HASH
+    ) {
+      content += queue + character;
+      queue = '';
+      continue;
+    }
+
+    while (character === C_SPACE || character === C_TAB) {
+      queue += character;
+      character = value.charAt(++index);
+    }
+
+    while (character === C_HASH) {
+      queue += character;
+      character = value.charAt(++index);
+    }
+
+    while (character === C_SPACE || character === C_TAB) {
+      queue += character;
+      character = value.charAt(++index);
+    }
+
+    index--;
+  }
+
+  now.column += subvalue.length;
+  now.offset += subvalue.length;
+  subvalue += content + queue;
+
+  return eat(subvalue)({
+    type: 'heading',
+    depth: depth,
+    children: self.tokenizeInline(content, now)
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.blockquote" id="apidoc.element.remark.Parser.super_.prototype.blockTokenizers.blockquote">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>blockquote
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function blockquote(eat, value, silent) {
+  var self = this;
+  var offsets = self.offset;
+  var tokenizers = self.blockTokenizers;
+  var interruptors = self.interruptBlockquote;
+  var now = eat.now();
+  var currentLine = now.line;
+  var length = value.length;
+  var values = [];
+  var contents = [];
+  var indents = [];
+  var add;
+  var index = 0;
+  var character;
+  var rest;
+  var nextIndex;
+  var content;
+  var line;
+  var startIndex;
+  var prefixed;
+  var exit;
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (character !== C_SPACE &amp;&amp; character !== C_TAB) {
+      break;
+    }
+
+    index++;
+  }
+
+  if (value.charAt(index) !== C_GT) {
+    return;
+  }
+
+  if (silent) {
+    return true;
+  }
+
+  index = 0;
+
+  while (index &lt; length) {
+    nextIndex = value.indexOf(C_NEWLINE, index);
+    startIndex = index;
+    prefixed = false;
+
+    if (nextIndex === -1) {
+      nextIndex = length;
+    }
+
+    while (index &lt; length) {
+      character = value.charAt(index);
+
+      if (character !== C_SPACE &amp;&amp; character !== C_TAB) {
+        break;
+      }
+
+      index++;
+    }
+
+    if (value.charAt(index) === C_GT) {
+      index++;
+      prefixed = true;
+
+      if (value.charAt(index) === C_SPACE) {
+        index++;
+      }
+    } else {
+      index = startIndex;
+    }
+
+    content = value.slice(index, nextIndex);
+
+    if (!prefixed &amp;&amp; !trim(content)) {
+      index = startIndex;
+      break;
+    }
+
+    if (!prefixed) {
+      rest = value.slice(index);
+
+<span class="apidocCodeCommentSpan">      /* Check if the following code contains a possible
+       * block. */
+</span>      if (interrupt(interruptors, tokenizers, self, [eat, rest, true])) {
+        break;
+      }
+    }
+
+    line = startIndex === index ? content : value.slice(startIndex, nextIndex);
+
+    indents.push(index - startIndex);
+    values.push(line);
+    contents.push(content);
+
+    index = nextIndex + 1;
+  }
+
+  index = -1;
+  length = indents.length;
+  add = eat(values.join(C_NEWLINE));
+
+  while (++index &lt; length) {
+    offsets[currentLine] = (offsets[currentLine] || 0) + indents[index];
+    currentLine++;
+  }
+
+  exit = self.enterBlock();
+  contents = self.tokenizeBlock(contents.join(C_NEWLINE), now);
+  exit();
+
+  return add({
+    type: 'blockquote',
+    children: contents
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.definition" id="apidoc.element.remark.Parser.super_.prototype.blockTokenizers.definition">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>definition
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function definition(eat, value, silent) {
+  var self = this;
+  var commonmark = self.options.commonmark;
+  var index = 0;
+  var length = value.length;
+  var subvalue = '';
+  var beforeURL;
+  var beforeTitle;
+  var queue;
+  var character;
+  var test;
+  var identifier;
+  var url;
+  var title;
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (character !== C_SPACE &amp;&amp; character !== C_TAB) {
+      break;
+    }
+
+    subvalue += character;
+    index++;
+  }
+
+  character = value.charAt(index);
+
+  if (character !== C_BRACKET_OPEN) {
+    return;
+  }
+
+  index++;
+  subvalue += character;
+  queue = '';
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (character === C_BRACKET_CLOSE) {
+      break;
+    } else if (character === C_BACKSLASH) {
+      queue += character;
+      index++;
+      character = value.charAt(index);
+    }
+
+    queue += character;
+    index++;
+  }
+
+  if (
+    !queue ||
+    value.charAt(index) !== C_BRACKET_CLOSE ||
+    value.charAt(index + 1) !== C_COLON
+  ) {
+    return;
+  }
+
+  identifier = queue;
+  subvalue += queue + C_BRACKET_CLOSE + C_COLON;
+  index = subvalue.length;
+  queue = '';
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (
+      character !== C_TAB &amp;&amp;
+      character !== C_SPACE &amp;&amp;
+      character !== C_NEWLINE
+    ) {
+      break;
+    }
+
+    subvalue += character;
+    index++;
+  }
+
+  character = value.charAt(index);
+  queue = '';
+  beforeURL = subvalue;
+
+  if (character === C_LT) {
+    index++;
+
+    while (index &lt; length) {
+      character = value.charAt(index);
+
+      if (!isEnclosedURLCharacter(character)) {
+        break;
+      }
+
+      queue += character;
+      index++;
+    }
+
+    character = value.charAt(index);
+
+    if (character === isEnclosedURLCharacter.delimiter) {
+      subvalue += C_LT + queue + character;
+      index++;
+    } else {
+      if (commonmark) {
+        return;
+      }
+
+      index -= queue.length + 1;
+      queue = '';
+    }
+  }
+
+  if (!queue) {
+    while (index &lt; length) {
+      character = value.charAt(index);
+
+      if (!isUnclosedURLCharacter(character)) {
+        break;
+      }
+
+      queue += character;
+      index++;
+    }
+
+    subvalue += queue;
+  }
+
+  if (!queue) {
+    return;
+  }
+
+  url = queue;
+  queue = '';
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (
+      character !== C_TAB &amp;&amp;
+      character !== C_SPACE &amp;&amp;
+      character !== C_NEWLINE
+    ) {
+      break;
+    }
+
+    queue += character;
+    index++;
+  }
+
+  character = value.charAt(index);
+  test = null;
+
+  if (character === C_DOUBLE_QUOTE) {
+    test = C_DOUBLE_QUOTE;
+  } else if (character === C_SINGLE_QUOTE) {
+    test = C_SINGLE_QUOTE;
+  } else if (character === C_PAREN_OPEN) {
+    test = C_PAREN_CLOSE;
+  }
+
+  if (!test) {
+    queue = '';
+    index = subvalue.length;
+  } else if (queue) {
+    subvalue += queue + character;
+    index = subvalue.length;
+    queue = '';
+
+    while (index &lt; length) {
+      character = value.charAt(index);
+
+      if (character === test) {
+        break;
+      }
+
+      if (character === C_NEWLINE) {
+        index++;
+        character = value.charAt(index);
+
+        if (character === C_NEWLINE || character === test) {
+          return;
+        }
+
+        queue += C_NEWLINE;
+      }
+
+      queue += character;
+      index++;
+    }
+
+    character = value.charAt(index);
+
+    if (character !== test) {
+      return;
+    }
+
+    beforeTitle = subvalue;
+    subvalue += queue + character;
+    index++;
+    title = queue;
+    queue = '';
+  } else {
+    return;
+  }
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (character !== C_TAB &amp;&amp; character !== C_SPACE) {
+      break;
+    }
+
+    subvalue += character;
+    index++;
+  }
+
+  character = value.charAt(index);
+
+  if (!character || character === C_NEWLINE) {
+    if (silent) {
+      return true;
+    }
+
+    beforeURL = eat(beforeURL).test().end;
+    url = self.decode.raw(self.unescape(url), beforeURL);
+
+    if (title) {
+      beforeTitle = eat(beforeTitle).test().end;
+      title = self.decode.raw(self.unescape(title), before ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.fencedCode" id="apidoc.element.remark.Parser.super_.prototype.blockTokenizers.fencedCode">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>fencedCode
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fencedCode(eat, value, silent) {
+  var self = this;
+  var settings = self.options;
+  var length = value.length + 1;
+  var index = 0;
+  var subvalue = '';
+  var fenceCount;
+  var marker;
+  var character;
+  var flag;
+  var queue;
+  var content;
+  var exdentedContent;
+  var closing;
+  var exdentedClosing;
+  var indent;
+  var now;
+
+  if (!settings.gfm) {
+    return;
+  }
+
+<span class="apidocCodeCommentSpan">  /* Eat initial spacing. */
+</span>  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (character !== C_SPACE &amp;&amp; character !== C_TAB) {
+      break;
+    }
+
+    subvalue += character;
+    index++;
+  }
+
+  indent = index;
+
+  /* Eat the fence. */
+  character = value.charAt(index);
+
+  if (character !== C_TILDE &amp;&amp; character !== C_TICK) {
+    return;
+  }
+
+  index++;
+  marker = character;
+  fenceCount = 1;
+  subvalue += character;
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (character !== marker) {
+      break;
+    }
+
+    subvalue += character;
+    fenceCount++;
+    index++;
+  }
+
+  if (fenceCount &lt; MIN_FENCE_COUNT) {
+    return;
+  }
+
+  /* Eat spacing before flag. */
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (character !== C_SPACE &amp;&amp; character !== C_TAB) {
+      break;
+    }
+
+    subvalue += character;
+    index++;
+  }
+
+  /* Eat flag. */
+  flag = queue = '';
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (
+      character === C_NEWLINE ||
+      character === C_TILDE ||
+      character === C_TICK
+    ) {
+      break;
+    }
+
+    if (character === C_SPACE || character === C_TAB) {
+      queue += character;
+    } else {
+      flag += queue + character;
+      queue = '';
+    }
+
+    index++;
+  }
+
+  character = value.charAt(index);
+
+  if (character &amp;&amp; character !== C_NEWLINE) {
+    return;
+  }
+
+  if (silent) {
+    return true;
+  }
+
+  now = eat.now();
+  now.column += subvalue.length;
+  now.offset += subvalue.length;
+
+  subvalue += flag;
+  flag = self.decode.raw(self.unescape(flag), now);
+
+  if (queue) {
+    subvalue += queue;
+  }
+
+  queue = closing = exdentedClosing = content = exdentedContent = '';
+
+  /* Eat content. */
+  while (index &lt; length) {
+    character = value.charAt(index);
+    content += closing;
+    exdentedContent += exdentedClosing;
+    closing = exdentedClosing = '';
+
+    if (character !== C_NEWLINE) {
+      content += character;
+      exdentedClosing += character;
+      index++;
+      continue;
+    }
+
+    /* Add the newline to `subvalue` if its the first
+     * character.  Otherwise, add it to the `closing`
+     * queue. */
+    if (content) {
+      closing += character;
+      exdentedClosing += character;
+    } else {
+      subvalue += character;
+    }
+
+    queue = '';
+    index++;
+
+    while (index &lt; length) {
+      character = value.charAt(index);
+
+      if (character !== C_SPACE) {
+        break;
+      }
+
+      queue += character;
+      index++;
+    }
+
+    closing += queue;
+    exdentedClosing += queue.slice(indent);
+
+    if (queue.length &gt;= CODE_INDENT_COUNT) {
+      continue;
+    }
+
+    queue = '';
+
+    while (index &lt; length) {
+      character = value.charAt(index);
+
+      if (character !== marker) {
+        break;
+      }
+
+      queue += character;
+      index++;
+    }
+
+    closing += queue;
+    exdentedClosing += queue;
+
+    if (queue.length &lt; fenceCount) {
+      continue;
+    }
+
+    queue = '';
+
+    while (index &lt; length) {
+      character = value.charAt(index);
+
+      if (character !== C_SPACE &amp;&amp; character !== C_TAB) {
+        break;
+      }
+
+      closing += character;
+      exdentedClosing += character;
+      index++;
+    }
+
+    if (!character || character === C_NEWLINE) {
+      break;
+    }
+  }
+
+  subvalue += content + closing;
+
+  return eat(subvalue)({
+    type: 'code',
+    lang: flag || null,
+    value: trim(exdentedContent)
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.footnote" id="apidoc.element.remark.Parser.super_.prototype.blockTokenizers.footnote">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>footnote
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function footnoteDefinition(eat, value, silent) {
+  var self = this;
+  var offsets = self.offset;
+  var index;
+  var length;
+  var subvalue;
+  var now;
+  var currentLine;
+  var content;
+  var queue;
+  var subqueue;
+  var character;
+  var identifier;
+  var add;
+  var exit;
+
+  if (!self.options.footnotes) {
+    return;
+  }
+
+  index = 0;
+  length = value.length;
+  subvalue = '';
+  now = eat.now();
+  currentLine = now.line;
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (!whitespace(character)) {
+      break;
+    }
+
+    subvalue += character;
+    index++;
+  }
+
+  if (
+    value.charAt(index) !== C_BRACKET_OPEN ||
+    value.charAt(index + 1) !== C_CARET
+  ) {
+    return;
+  }
+
+  subvalue += C_BRACKET_OPEN + C_CARET;
+  index = subvalue.length;
+  queue = '';
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (character === C_BRACKET_CLOSE) {
+      break;
+    } else if (character === C_BACKSLASH) {
+      queue += character;
+      index++;
+      character = value.charAt(index);
+    }
+
+    queue += character;
+    index++;
+  }
+
+  if (
+    !queue ||
+    value.charAt(index) !== C_BRACKET_CLOSE ||
+    value.charAt(index + 1) !== C_COLON
+  ) {
+    return;
+  }
+
+  if (silent) {
+    return true;
+  }
+
+  identifier = normalize(queue);
+  subvalue += queue + C_BRACKET_CLOSE + C_COLON;
+  index = subvalue.length;
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (character !== C_TAB &amp;&amp; character !== C_SPACE) {
+      break;
+    }
+
+    subvalue += character;
+    index++;
+  }
+
+  now.column += subvalue.length;
+  now.offset += subvalue.length;
+  queue = content = subqueue = '';
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (character === C_NEWLINE) {
+      subqueue = character;
+      index++;
+
+      while (index &lt; length) {
+        character = value.charAt(index);
+
+        if (character !== C_NEWLINE) {
+          break;
+        }
+
+        subqueue += character;
+        index++;
+      }
+
+      queue += subqueue;
+      subqueue = '';
+
+      while (index &lt; length) {
+        character = value.charAt(index);
+
+        if (character !== C_SPACE) {
+          break;
+        }
+
+        subqueue += character;
+        index++;
+      }
+
+      if (subqueue.length === 0) {
+        break;
+      }
+
+      queue += subqueue;
+    }
+
+    if (queue) {
+      content += queue;
+      queue = '';
+    }
+
+    content += character;
+    index++;
+  }
+
+  subvalue += content;
+
+  content = content.replace(EXPRESSION_INITIAL_TAB, function (line) {
+    offsets[currentLine] = (offsets[currentLine] || 0) + line.length;
+    currentLine++;
+
+    return '';
+  });
+
+  add = eat(subvalue);
+
+  exit = self.enterBlock();
+  content = self.tokenizeBlock(content, now);
+  exit();
+
+  return add({
+    type: 'footnoteDefinition',
+    identifier: identifier,
+    children: content
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.html" id="apidoc.element.remark.Parser.super_.prototype.blockTokenizers.html">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>html
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function blockHTML(eat, value, silent) {
+  var self = this;
+  var blocks = self.options.blocks;
+  var length = value.length;
+  var index = 0;
+  var next;
+  var line;
+  var offset;
+  var character;
+  var count;
+  var sequence;
+  var subvalue;
+
+  var sequences = [
+    [/^&lt;(script|pre|style)(?=(\s|&gt;|$))/i, /&lt;\/(script|pre|style)&gt;/i, true],
+    [/^&lt;!--/, /--&gt;/, true],
+    [/^&lt;\?/, /\?&gt;/, true],
+    [/^&lt;![A-Za-z]/, /&gt;/, true],
+    [/^&lt;!\[CDATA\[/, /\]\]&gt;/, true],
+    [new RegExp('^&lt;/?(' + blocks.join('|') + ')(?=(\\s|/?&gt;|$))', 'i'), /^$/, true],
+    [new RegExp(openCloseTag.source + '\\s*$'), /^$/, false]
+  ];
+
+<span class="apidocCodeCommentSpan">  /* Eat initial spacing. */
+</span>  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (character !== C_TAB &amp;&amp; character !== C_SPACE) {
+      break;
+    }
+
+    index++;
+  }
+
+  if (value.charAt(index) !== C_LT) {
+    return;
+  }
+
+  next = value.indexOf(C_NEWLINE, index + 1);
+  next = next === -1 ? length : next;
+  line = value.slice(index, next);
+  offset = -1;
+  count = sequences.length;
+
+  while (++offset &lt; count) {
+    if (sequences[offset][0].test(line)) {
+      sequence = sequences[offset];
+      break;
+    }
+  }
+
+  if (!sequence) {
+    return;
+  }
+
+  if (silent) {
+    return sequence[2];
+  }
+
+  index = next;
+
+  if (!sequence[1].test(line)) {
+    while (index &lt; length) {
+      next = value.indexOf(C_NEWLINE, index + 1);
+      next = next === -1 ? length : next;
+      line = value.slice(index + 1, next);
+
+      if (sequence[1].test(line)) {
+        if (line) {
+          index = next;
+        }
+
+        break;
+      }
+
+      index = next;
+    }
+  }
+
+  subvalue = value.slice(0, index);
+
+  return eat(subvalue)({type: 'html', value: subvalue});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.indentedCode" id="apidoc.element.remark.Parser.super_.prototype.blockTokenizers.indentedCode">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>indentedCode
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function indentedCode(eat, value, silent) {
+  var index = -1;
+  var length = value.length;
+  var subvalue = '';
+  var content = '';
+  var subvalueQueue = '';
+  var contentQueue = '';
+  var character;
+  var blankQueue;
+  var indent;
+
+  while (++index &lt; length) {
+    character = value.charAt(index);
+
+    if (indent) {
+      indent = false;
+
+      subvalue += subvalueQueue;
+      content += contentQueue;
+      subvalueQueue = contentQueue = '';
+
+      if (character === C_NEWLINE) {
+        subvalueQueue = contentQueue = character;
+      } else {
+        subvalue += character;
+        content += character;
+
+        while (++index &lt; length) {
+          character = value.charAt(index);
+
+          if (!character || character === C_NEWLINE) {
+            contentQueue = subvalueQueue = character;
+            break;
+          }
+
+          subvalue += character;
+          content += character;
+        }
+      }
+    } else if (
+      character === C_SPACE &amp;&amp;
+      value.charAt(index + 1) === character &amp;&amp;
+      value.charAt(index + 2) === character &amp;&amp;
+      value.charAt(index + 3) === character
+    ) {
+      subvalueQueue += CODE_INDENT;
+      index += 3;
+      indent = true;
+    } else if (character === C_TAB) {
+      subvalueQueue += character;
+      indent = true;
+    } else {
+      blankQueue = '';
+
+      while (character === C_TAB || character === C_SPACE) {
+        blankQueue += character;
+        character = value.charAt(++index);
+      }
+
+      if (character !== C_NEWLINE) {
+        break;
+      }
+
+      subvalueQueue += blankQueue + character;
+      contentQueue += character;
+    }
+  }
+
+  if (content) {
+    if (silent) {
+      return true;
+    }
+
+    return eat(subvalue)({
+      type: 'code',
+      lang: null,
+      value: trim(content)
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.list" id="apidoc.element.remark.Parser.super_.prototype.blockTokenizers.list">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>list
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function list(eat, value, silent) {
+  var self = this;
+  var commonmark = self.options.commonmark;
+  var pedantic = self.options.pedantic;
+  var tokenizers = self.blockTokenizers;
+  var interuptors = self.interruptList;
+  var markers;
+  var index = 0;
+  var length = value.length;
+  var start = null;
+  var size = 0;
+  var queue;
+  var ordered;
+  var character;
+  var marker;
+  var nextIndex;
+  var startIndex;
+  var prefixed;
+  var currentMarker;
+  var content;
+  var line;
+  var prevEmpty;
+  var empty;
+  var items;
+  var allLines;
+  var emptyLines;
+  var item;
+  var enterTop;
+  var exitBlockquote;
+  var isLoose;
+  var node;
+  var now;
+  var end;
+  var indented;
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (character === C_TAB) {
+      size += TAB_SIZE - (size % TAB_SIZE);
+    } else if (character === C_SPACE) {
+      size++;
+    } else {
+      break;
+    }
+
+    index++;
+  }
+
+  if (size &gt;= TAB_SIZE) {
+    return;
+  }
+
+  character = value.charAt(index);
+
+  markers = commonmark ?
+    LIST_ORDERED_COMMONMARK_MARKERS :
+    LIST_ORDERED_MARKERS;
+
+  if (LIST_UNORDERED_MARKERS[character] === true) {
+    marker = character;
+    ordered = false;
+  } else {
+    ordered = true;
+    queue = '';
+
+    while (index &lt; length) {
+      character = value.charAt(index);
+
+      if (!decimal(character)) {
+        break;
+      }
+
+      queue += character;
+      index++;
+    }
+
+    character = value.charAt(index);
+
+    if (!queue || markers[character] !== true) {
+      return;
+    }
+
+    start = parseInt(queue, 10);
+    marker = character;
+  }
+
+  character = value.charAt(++index);
+
+  if (character !== C_SPACE &amp;&amp; character !== C_TAB) {
+    return;
+  }
+
+  if (silent) {
+    return true;
+  }
+
+  index = 0;
+  items = [];
+  allLines = [];
+  emptyLines = [];
+
+  while (index &lt; length) {
+    nextIndex = value.indexOf(C_NEWLINE, index);
+    startIndex = index;
+    prefixed = false;
+    indented = false;
+
+    if (nextIndex === -1) {
+      nextIndex = length;
+    }
+
+    end = index + TAB_SIZE;
+    size = 0;
+
+    while (index &lt; length) {
+      character = value.charAt(index);
+
+      if (character === C_TAB) {
+        size += TAB_SIZE - (size % TAB_SIZE);
+      } else if (character === C_SPACE) {
+        size++;
+      } else {
+        break;
+      }
+
+      index++;
+    }
+
+    if (size &gt;= TAB_SIZE) {
+      indented = true;
+    }
+
+    if (item &amp;&amp; size &gt;= item.indent) {
+      indented = true;
+    }
+
+    character = value.charAt(index);
+    currentMarker = null;
+
+    if (!indented) {
+      if (LIST_UNORDERED_MARKERS[character] === true) {
+        currentMarker = character;
+        index++;
+        size++;
+      } else {
+        queue = '';
+
+        while (index &lt; length) {
+          character = value.charAt(index);
+
+          if (!decimal(character)) {
+            break;
+          }
+
+          queue += character;
+          index++;
+        }
+
+        character = value.charAt(index);
+        index++;
+
+        if (queue &amp;&amp; markers[character] === true) {
+          currentMarker = character;
+          size += queue.length + 1;
+        }
+      }
+
+      if (currentMarker) {
+        character = value.charAt(index);
+
+        if (character === C_TAB) {
+          size += TAB_SIZE - (size % TAB_SIZE);
+          index++;
+        } else if (character === C_SPACE) {
+          end = index + TAB_SIZE;
+
+          while (index &lt; end) {
+            if (value.charAt(index) !== C_SPACE) {
+              break;
+            }
+
+            index++;
+            size++;
+          }
+
+          if (index === end &amp;&amp; value.charAt(index) === C_SPACE) {
+            index -= TAB_SIZE - 1;
+            size -= TAB_SIZE - 1;
+          }
+        } else if (character !== C_NEWLINE &amp;&amp; character !== '') {
+          currentMarker = null;
+        }
+      }
+    }
+
+    if (currentMarker) {
+      if (!pedantic &amp;&amp; marker !== currentMarker) {
+        break;
+      }
+
+      prefixed = true;
+    } else {
+      if (!commonmark &amp;&amp; !indented &amp;&amp; value.charAt(startIndex) === C_SPACE) {
+        indented = true;
+      } else if (commonmark &amp;&amp; item) {
+        indented = size &gt;= item.indent || size ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.newline" id="apidoc.element.remark.Parser.super_.prototype.blockTokenizers.newline">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>newline
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function newline(eat, value, silent) {
+  var character = value.charAt(0);
+  var length;
+  var subvalue;
+  var queue;
+  var index;
+
+  if (character !== '\n') {
+    return;
+  }
+
+<span class="apidocCodeCommentSpan">  /* istanbul ignore if - never used (yet) */
+</span>  if (silent) {
+    return true;
+  }
+
+  index = 1;
+  length = value.length;
+  subvalue = character;
+  queue = '';
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (!whitespace(character)) {
+      break;
+    }
+
+    queue += character;
+
+    if (character === '\n') {
+      subvalue += queue;
+      queue = '';
+    }
+
+    index++;
+  }
+
+  eat(subvalue);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.paragraph" id="apidoc.element.remark.Parser.super_.prototype.blockTokenizers.paragraph">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>paragraph
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function paragraph(eat, value, silent) {
+  var self = this;
+  var settings = self.options;
+  var commonmark = settings.commonmark;
+  var gfm = settings.gfm;
+  var tokenizers = self.blockTokenizers;
+  var interruptors = self.interruptParagraph;
+  var index = value.indexOf(C_NEWLINE);
+  var length = value.length;
+  var position;
+  var subvalue;
+  var character;
+  var size;
+  var now;
+
+  while (index &lt; length) {
+<span class="apidocCodeCommentSpan">    /* Eat everything if thereâ€™s no following newline. */
+</span>    if (index === -1) {
+      index = length;
+      break;
+    }
+
+    /* Stop if the next character is NEWLINE. */
+    if (value.charAt(index + 1) === C_NEWLINE) {
+      break;
+    }
+
+    /* In commonmark-mode, following indented lines
+     * are part of the paragraph. */
+    if (commonmark) {
+      size = 0;
+      position = index + 1;
+
+      while (position &lt; length) {
+        character = value.charAt(position);
+
+        if (character === C_TAB) {
+          size = TAB_SIZE;
+          break;
+        } else if (character === C_SPACE) {
+          size++;
+        } else {
+          break;
+        }
+
+        position++;
+      }
+
+      if (size &gt;= TAB_SIZE) {
+        index = value.indexOf(C_NEWLINE, index + 1);
+        continue;
+      }
+    }
+
+    subvalue = value.slice(index + 1);
+
+    /* Check if the following code contains a possible
+     * block. */
+    if (interrupt(interruptors, tokenizers, self, [eat, subvalue, true])) {
+      break;
+    }
+
+    /* Break if the following line starts a list, when
+     * already in a list, or when in commonmark, or when
+     * in gfm mode and the bullet is *not* numeric. */
+    if (
+      tokenizers.list.call(self, eat, subvalue, true) &amp;&amp;
+      (
+        self.inList ||
+        commonmark ||
+        (gfm &amp;&amp; !decimal(trim.left(subvalue).charAt(0)))
+      )
+    ) {
+      break;
+    }
+
+    position = index;
+    index = value.indexOf(C_NEWLINE, index + 1);
+
+    if (index !== -1 &amp;&amp; trim(value.slice(position, index)) === '') {
+      index = position;
+      break;
+    }
+  }
+
+  subvalue = value.slice(0, index);
+
+  if (trim(subvalue) === '') {
+    eat(subvalue);
+
+    return null;
+  }
+
+  /* istanbul ignore if - never used (yet) */
+  if (silent) {
+    return true;
+  }
+
+  now = eat.now();
+  subvalue = trimTrailingLines(subvalue);
+
+  return eat(subvalue)({
+    type: 'paragraph',
+    children: self.tokenizeInline(subvalue, now)
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.setextHeading" id="apidoc.element.remark.Parser.super_.prototype.blockTokenizers.setextHeading">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>setextHeading
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setextHeading(eat, value, silent) {
+  var self = this;
+  var now = eat.now();
+  var length = value.length;
+  var index = -1;
+  var subvalue = '';
+  var content;
+  var queue;
+  var character;
+  var marker;
+  var depth;
+
+<span class="apidocCodeCommentSpan">  /* Eat initial indentation. */
+</span>  while (++index &lt; length) {
+    character = value.charAt(index);
+
+    if (character !== C_SPACE || index &gt;= MAX_HEADING_INDENT) {
+      index--;
+      break;
+    }
+
+    subvalue += character;
+  }
+
+  /* Eat content. */
+  content = queue = '';
+
+  while (++index &lt; length) {
+    character = value.charAt(index);
+
+    if (character === C_NEWLINE) {
+      index--;
+      break;
+    }
+
+    if (character === C_SPACE || character === C_TAB) {
+      queue += character;
+    } else {
+      content += queue + character;
+      queue = '';
+    }
+  }
+
+  now.column += subvalue.length;
+  now.offset += subvalue.length;
+  subvalue += content + queue;
+
+  /* Ensure the content is followed by a newline and a
+   * valid marker. */
+  character = value.charAt(++index);
+  marker = value.charAt(++index);
+
+  if (character !== C_NEWLINE || !SETEXT_MARKERS[marker]) {
+    return;
+  }
+
+  subvalue += character;
+
+  /* Eat Setext-line. */
+  queue = marker;
+  depth = SETEXT_MARKERS[marker];
+
+  while (++index &lt; length) {
+    character = value.charAt(index);
+
+    if (character !== marker) {
+      if (character !== C_NEWLINE) {
+        return;
+      }
+
+      index--;
+      break;
+    }
+
+    queue += character;
+  }
+
+  if (silent) {
+    return true;
+  }
+
+  return eat(subvalue + queue)({
+    type: 'heading',
+    depth: depth,
+    children: self.tokenizeInline(content, now)
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.table" id="apidoc.element.remark.Parser.super_.prototype.blockTokenizers.table">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>table
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function table(eat, value, silent) {
+  var self = this;
+  var index;
+  var alignments;
+  var alignment;
+  var subvalue;
+  var row;
+  var length;
+  var lines;
+  var queue;
+  var character;
+  var hasDash;
+  var align;
+  var cell;
+  var preamble;
+  var count;
+  var opening;
+  var now;
+  var position;
+  var lineCount;
+  var line;
+  var rows;
+  var table;
+  var lineIndex;
+  var pipeIndex;
+  var first;
+
+<span class="apidocCodeCommentSpan">  /* Exit when not in gfm-mode. */
+</span>  if (!self.options.gfm) {
+    return;
+  }
+
+  /* Get the rows.
+   * Detecting tables soon is hard, so there are some
+   * checks for performance here, such as the minimum
+   * number of rows, and allowed characters in the
+   * alignment row. */
+  index = lineCount = 0;
+  length = value.length + 1;
+  lines = [];
+
+  while (index &lt; length) {
+    lineIndex = value.indexOf(C_NEWLINE, index);
+    pipeIndex = value.indexOf(C_PIPE, index + 1);
+
+    if (lineIndex === -1) {
+      lineIndex = value.length;
+    }
+
+    if (pipeIndex === -1 || pipeIndex &gt; lineIndex) {
+      if (lineCount &lt; MIN_TABLE_ROWS) {
+        return;
+      }
+
+      break;
+    }
+
+    lines.push(value.slice(index, lineIndex));
+    lineCount++;
+    index = lineIndex + 1;
+  }
+
+  /* Parse the alignment row. */
+  subvalue = lines.join(C_NEWLINE);
+  alignments = lines.splice(1, 1)[0] || [];
+  index = 0;
+  length = alignments.length;
+  lineCount--;
+  alignment = false;
+  align = [];
+
+  while (index &lt; length) {
+    character = alignments.charAt(index);
+
+    if (character === C_PIPE) {
+      hasDash = null;
+
+      if (alignment === false) {
+        if (first === false) {
+          return;
+        }
+      } else {
+        align.push(alignment);
+        alignment = false;
+      }
+
+      first = false;
+    } else if (character === C_DASH) {
+      hasDash = true;
+      alignment = alignment || TABLE_ALIGN_NONE;
+    } else if (character === C_COLON) {
+      if (alignment === TABLE_ALIGN_LEFT) {
+        alignment = TABLE_ALIGN_CENTER;
+      } else if (hasDash &amp;&amp; alignment === TABLE_ALIGN_NONE) {
+        alignment = TABLE_ALIGN_RIGHT;
+      } else {
+        alignment = TABLE_ALIGN_LEFT;
+      }
+    } else if (!whitespace(character)) {
+      return;
+    }
+
+    index++;
+  }
+
+  if (alignment !== false) {
+    align.push(alignment);
+  }
+
+  /* Exit when without enough columns. */
+  if (align.length &lt; MIN_TABLE_COLUMNS) {
+    return;
+  }
+
+  /* istanbul ignore if - never used (yet) */
+  if (silent) {
+    return true;
+  }
+
+  /* Parse the rows. */
+  position = -1;
+  rows = [];
+
+  table = eat(subvalue).reset({
+    type: 'table',
+    align: align,
+    children: rows
+  });
+
+  while (++position &lt; lineCount) {
+    line = lines[position];
+    row = {type: 'tableRow', children: []};
+
+    /* Eat a newline character when this is not the
+     * first row. */
+    if (position) {
+      eat(C_NEWLINE);
+    }
+
+    /* Eat the row. */
+    eat(line).reset(row, table);
+
+    length = line.length + 1;
+    index = 0;
+    queue = cell = '';
+    preamble = true;
+    count = opening = null;
+
+    while (index &lt; length) {
+      character = line.charAt(index);
+
+      if (character === C_TAB || character === C_SPACE) {
+        if (cell) {
+          queue += character;
+        } else {
+          eat(character);
+        }
+
+        index++;
+        continue;
+      }
+
+      if (character === '' || character === C_PIPE) {
+        if (preamble) {
+          eat(character);
+        } else {
+          if (character &amp;&amp; opening) {
+            queue += character;
+            index++;
+            continue;
+          }
+
+          if ((cell || character) &amp;&amp; !preamble) {
+            subvalue = cell;
+
+            if (queue.length &gt; 1) {
+              if (character) {
+                subvalue += queue.slice(0, queue.length - 1);
+                queue = queue.charAt(queue.length - 1);
+              } else {
+                subvalue += queue;
+                queue = '';
+              }
+            }
+
+            now = eat.now();
+
+            eat(subvalue)({
+              type: 'tableCell',
+              children: self.tokenizeInline(cell, now)
+            }, row);
+          }
+
+          eat(queue + character ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.thematicBreak" id="apidoc.element.remark.Parser.super_.prototype.blockTokenizers.thematicBreak">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>thematicBreak
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function thematicBreak(eat, value, silent) {
+  var index = -1;
+  var length = value.length + 1;
+  var subvalue = '';
+  var character;
+  var marker;
+  var markerCount;
+  var queue;
+
+  while (++index &lt; length) {
+    character = value.charAt(index);
+
+    if (character !== C_TAB &amp;&amp; character !== C_SPACE) {
+      break;
+    }
+
+    subvalue += character;
+  }
+
+  if (
+    character !== C_ASTERISK &amp;&amp;
+    character !== C_DASH &amp;&amp;
+    character !== C_UNDERSCORE
+  ) {
+    return;
+  }
+
+  marker = character;
+  subvalue += character;
+  markerCount = 1;
+  queue = '';
+
+  while (++index &lt; length) {
+    character = value.charAt(index);
+
+    if (character === marker) {
+      markerCount++;
+      subvalue += queue + marker;
+      queue = '';
+    } else if (character === C_SPACE) {
+      queue += character;
+    } else if (
+      markerCount &gt;= THEMATIC_BREAK_MARKER_COUNT &amp;&amp;
+      (!character || character === C_NEWLINE)
+    ) {
+      subvalue += queue;
+
+      if (silent) {
+        return true;
+      }
+
+      return eat(subvalue)({type: 'thematicBreak'});
+    } else {
+      return;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.blockTokenizers.yamlFrontMatter" id="apidoc.element.remark.Parser.super_.prototype.blockTokenizers.yamlFrontMatter">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.blockTokenizers.</span>yamlFrontMatter
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function yaml(eat, value, silent) {
+  var self = this;
+  var subvalue;
+  var content;
+  var index;
+  var length;
+  var character;
+  var queue;
+
+  if (
+    !self.options.yaml ||
+    value.charAt(0) !== C_DASH ||
+    value.charAt(1) !== C_DASH ||
+    value.charAt(2) !== C_DASH ||
+    value.charAt(3) !== C_NEWLINE
+  ) {
+    return;
+  }
+
+  subvalue = FENCE + C_NEWLINE;
+  content = queue = '';
+  index = 3;
+  length = value.length;
+
+  while (++index &lt; length) {
+    character = value.charAt(index);
+
+    if (
+      character === C_DASH &amp;&amp;
+      (queue || !content) &amp;&amp;
+      value.charAt(index + 1) === C_DASH &amp;&amp;
+      value.charAt(index + 2) === C_DASH
+    ) {
+<span class="apidocCodeCommentSpan">      /* istanbul ignore if - never used (yet) */
+</span>      if (silent) {
+        return true;
+      }
+
+      subvalue += queue + FENCE;
+
+      return eat(subvalue)({
+        type: 'yaml',
+        value: content
+      });
+    }
+
+    if (character === C_NEWLINE) {
+      queue += character;
+    } else {
+      subvalue += queue + character;
+      content += queue + character;
+      queue = '';
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.remark.Parser.super_.prototype.inlineTokenizers" id="apidoc.module.remark.Parser.super_.prototype.inlineTokenizers">module remark.Parser.super_.prototype.inlineTokenizers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.autoLink" id="apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.autoLink">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>autoLink
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function autoLink(eat, value, silent) {
+  var self;
+  var subvalue;
+  var length;
+  var index;
+  var queue;
+  var character;
+  var hasAtCharacter;
+  var link;
+  var now;
+  var content;
+  var tokenize;
+  var exit;
+
+  if (value.charAt(0) !== C_LT) {
+    return;
+  }
+
+  self = this;
+  subvalue = '';
+  length = value.length;
+  index = 0;
+  queue = '';
+  hasAtCharacter = false;
+  link = '';
+
+  index++;
+  subvalue = C_LT;
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (
+      character === ' ' ||
+      character === C_GT ||
+      character === C_AT_SIGN ||
+      (character === ':' &amp;&amp; value.charAt(index + 1) === C_SLASH)
+    ) {
+      break;
+    }
+
+    queue += character;
+    index++;
+  }
+
+  if (!queue) {
+    return;
+  }
+
+  link += queue;
+  queue = '';
+
+  character = value.charAt(index);
+  link += character;
+  index++;
+
+  if (character === C_AT_SIGN) {
+    hasAtCharacter = true;
+  } else {
+    if (
+      character !== ':' ||
+      value.charAt(index + 1) !== C_SLASH
+    ) {
+      return;
+    }
+
+    link += C_SLASH;
+    index++;
+  }
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (character === ' ' || character === C_GT) {
+      break;
+    }
+
+    queue += character;
+    index++;
+  }
+
+  character = value.charAt(index);
+
+  if (!queue || character !== C_GT) {
+    return;
+  }
+
+<span class="apidocCodeCommentSpan">  /* istanbul ignore if - never used (yet) */
+</span>  if (silent) {
+    return true;
+  }
+
+  link += queue;
+  content = link;
+  subvalue += link + character;
+  now = eat.now();
+  now.column++;
+  now.offset++;
+
+  if (hasAtCharacter) {
+    if (link.slice(0, MAILTO_LENGTH).toLowerCase() === MAILTO) {
+      content = content.substr(MAILTO_LENGTH);
+      now.column += MAILTO_LENGTH;
+      now.offset += MAILTO_LENGTH;
+    } else {
+      link = MAILTO + link;
+    }
+  }
+
+  /* Temporarily remove support for escapes in autolinks. */
+  tokenize = self.inlineTokenizers.escape;
+  self.inlineTokenizers.escape = null;
+  exit = self.enterLink();
+
+  content = self.tokenizeInline(content, now);
+
+  self.inlineTokenizers.escape = tokenize;
+  exit();
+
+  return eat(subvalue)({
+    type: 'link',
+    title: null,
+    url: decode(link),
+    children: content
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.break" id="apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.break">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>break
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hardBreak(eat, value, silent) {
+  var self = this;
+  var breaks = self.options.breaks;
+  var length = value.length;
+  var index = -1;
+  var queue = '';
+  var character;
+
+  while (++index &lt; length) {
+    character = value.charAt(index);
+
+    if (character === '\n') {
+      if (!breaks &amp;&amp; index &lt; MIN_BREAK_LENGTH) {
+        return;
+      }
+
+<span class="apidocCodeCommentSpan">      /* istanbul ignore if - never used (yet) */
+</span>      if (silent) {
+        return true;
+      }
+
+      queue += character;
+
+      return eat(queue)({type: 'break'});
+    }
+
+    if (character !== ' ') {
+      return;
+    }
+
+    queue += character;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.code" id="apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.code">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>code
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function inlineCode(eat, value, silent) {
+  var length = value.length;
+  var index = 0;
+  var queue = '';
+  var tickQueue = '';
+  var contentQueue;
+  var subqueue;
+  var count;
+  var openingCount;
+  var subvalue;
+  var character;
+  var found;
+  var next;
+
+  while (index &lt; length) {
+    if (value.charAt(index) !== C_TICK) {
+      break;
+    }
+
+    queue += C_TICK;
+    index++;
+  }
+
+  if (!queue) {
+    return;
+  }
+
+  subvalue = queue;
+  openingCount = index;
+  queue = '';
+  next = value.charAt(index);
+  count = 0;
+
+  while (index &lt; length) {
+    character = next;
+    next = value.charAt(index + 1);
+
+    if (character === C_TICK) {
+      count++;
+      tickQueue += character;
+    } else {
+      count = 0;
+      queue += character;
+    }
+
+    if (count &amp;&amp; next !== C_TICK) {
+      if (count === openingCount) {
+        subvalue += queue + tickQueue;
+        found = true;
+        break;
+      }
+
+      queue += tickQueue;
+      tickQueue = '';
+    }
+
+    index++;
+  }
+
+  if (!found) {
+    if (openingCount % 2 !== 0) {
+      return;
+    }
+
+    queue = '';
+  }
+
+<span class="apidocCodeCommentSpan">  /* istanbul ignore if - never used (yet) */
+</span>  if (silent) {
+    return true;
+  }
+
+  contentQueue = subqueue = '';
+  length = queue.length;
+  index = -1;
+
+  while (++index &lt; length) {
+    character = queue.charAt(index);
+
+    if (whitespace(character)) {
+      subqueue += character;
+      continue;
+    }
+
+    if (subqueue) {
+      if (contentQueue) {
+        contentQueue += subqueue;
+      }
+
+      subqueue = '';
+    }
+
+    contentQueue += character;
+  }
+
+  return eat(subvalue)({
+    type: 'inlineCode',
+    value: contentQueue
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.deletion" id="apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.deletion">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>deletion
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function strikethrough(eat, value, silent) {
+  var self = this;
+  var character = '';
+  var previous = '';
+  var preceding = '';
+  var subvalue = '';
+  var index;
+  var length;
+  var now;
+
+  if (
+    !self.options.gfm ||
+    value.charAt(0) !== C_TILDE ||
+    value.charAt(1) !== C_TILDE ||
+    whitespace(value.charAt(2))
+  ) {
+    return;
+  }
+
+  index = 1;
+  length = value.length;
+  now = eat.now();
+  now.column += 2;
+  now.offset += 2;
+
+  while (++index &lt; length) {
+    character = value.charAt(index);
+
+    if (
+      character === C_TILDE &amp;&amp;
+      previous === C_TILDE &amp;&amp;
+      (!preceding || !whitespace(preceding))
+    ) {
+<span class="apidocCodeCommentSpan">      /* istanbul ignore if - never used (yet) */
+</span>      if (silent) {
+        return true;
+      }
+
+      return eat(DOUBLE + subvalue + DOUBLE)({
+        type: 'delete',
+        children: self.tokenizeInline(subvalue, now)
+      });
+    }
+
+    subvalue += previous;
+    preceding = previous;
+    previous = character;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.emphasis" id="apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.emphasis">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>emphasis
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emphasis(eat, value, silent) {
+  var self = this;
+  var index = 0;
+  var character = value.charAt(index);
+  var now;
+  var pedantic;
+  var marker;
+  var queue;
+  var subvalue;
+  var length;
+  var prev;
+
+  if (character !== C_ASTERISK &amp;&amp; character !== C_UNDERSCORE) {
+    return;
+  }
+
+  pedantic = self.options.pedantic;
+  subvalue = marker = character;
+  length = value.length;
+  index++;
+  queue = character = '';
+
+  if (pedantic &amp;&amp; whitespace(value.charAt(index))) {
+    return;
+  }
+
+  while (index &lt; length) {
+    prev = character;
+    character = value.charAt(index);
+
+    if (character === marker &amp;&amp; (!pedantic || !whitespace(prev))) {
+      character = value.charAt(++index);
+
+      if (character !== marker) {
+        if (!trim(queue) || prev === marker) {
+          return;
+        }
+
+        if (!pedantic &amp;&amp; marker === C_UNDERSCORE &amp;&amp; word(character)) {
+          queue += marker;
+          continue;
+        }
+
+<span class="apidocCodeCommentSpan">        /* istanbul ignore if - never used (yet) */
+</span>        if (silent) {
+          return true;
+        }
+
+        now = eat.now();
+        now.column++;
+        now.offset++;
+
+        return eat(subvalue + queue + marker)({
+          type: 'emphasis',
+          children: self.tokenizeInline(queue, now)
+        });
+      }
+
+      queue += marker;
+    }
+
+    if (!pedantic &amp;&amp; character === '\\') {
+      queue += character;
+      character = value.charAt(++index);
+    }
+
+    queue += character;
+    index++;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.escape" id="apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.escape">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>escape
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function escape(eat, value, silent) {
+  var self = this;
+  var character;
+  var node;
+
+  if (value.charAt(0) === '\\') {
+    character = value.charAt(1);
+
+    if (self.escape.indexOf(character) !== -1) {
+<span class="apidocCodeCommentSpan">      /* istanbul ignore if - never used (yet) */
+</span>      if (silent) {
+        return true;
+      }
+
+      if (character === '\n') {
+        node = {type: 'break'};
+      } else {
+        node = {
+          type: 'text',
+          value: character
+        };
+      }
+
+      return eat('\\' + character)(node);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.html" id="apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.html">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>html
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function inlineHTML(eat, value, silent) {
+  var self = this;
+  var length = value.length;
+  var character;
+  var subvalue;
+
+  if (value.charAt(0) !== '&lt;' || length &lt; 3) {
+    return;
+  }
+
+  character = value.charAt(1);
+
+  if (
+    !alphabetical(character) &amp;&amp;
+    character !== '?' &amp;&amp;
+    character !== '!' &amp;&amp;
+    character !== '/'
+  ) {
+    return;
+  }
+
+  subvalue = value.match(tag);
+
+  if (!subvalue) {
+    return;
+  }
+
+<span class="apidocCodeCommentSpan">  /* istanbul ignore if - not used yet. */
+</span>  if (silent) {
+    return true;
+  }
+
+  subvalue = subvalue[0];
+
+  if (!self.inLink &amp;&amp; EXPRESSION_HTML_LINK_OPEN.test(subvalue)) {
+    self.inLink = true;
+  } else if (self.inLink &amp;&amp; EXPRESSION_HTML_LINK_CLOSE.test(subvalue)) {
+    self.inLink = false;
+  }
+
+  return eat(subvalue)({type: 'html', value: subvalue});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.link" id="apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.link">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>link
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function link(eat, value, silent) {
+  var self = this;
+  var subvalue = '';
+  var index = 0;
+  var character = value.charAt(0);
+  var commonmark = self.options.commonmark;
+  var gfm = self.options.gfm;
+  var closed;
+  var count;
+  var opening;
+  var beforeURL;
+  var beforeTitle;
+  var subqueue;
+  var hasMarker;
+  var markers;
+  var isImage;
+  var content;
+  var marker;
+  var length;
+  var title;
+  var depth;
+  var queue;
+  var url;
+  var now;
+  var exit;
+  var node;
+
+<span class="apidocCodeCommentSpan">  /* Detect whether this is an image. */
+</span>  if (character === '!') {
+    isImage = true;
+    subvalue = character;
+    character = value.charAt(++index);
+  }
+
+  /* Eat the opening. */
+  if (character !== C_BRACKET_OPEN) {
+    return;
+  }
+
+  /* Exit when this is a link and weâ€™re already inside
+   * a link. */
+  if (!isImage &amp;&amp; self.inLink) {
+    return;
+  }
+
+  subvalue += character;
+  queue = '';
+  index++;
+
+  /* Eat the content. */
+  length = value.length;
+  now = eat.now();
+  depth = 0;
+
+  now.column += index;
+  now.offset += index;
+
+  while (index &lt; length) {
+    subqueue = character = value.charAt(index);
+
+    if (character === C_TICK) {
+      /* Inline-code in link content. */
+      count = 1;
+
+      while (value.charAt(index + 1) === C_TICK) {
+        subqueue += character;
+        index++;
+        count++;
+      }
+
+      if (!opening) {
+        opening = count;
+      } else if (count &gt;= opening) {
+        opening = 0;
+      }
+    } else if (character === C_BACKSLASH) {
+      /* Allow brackets to be escaped. */
+      index++;
+      subqueue += value.charAt(index);
+    /* In GFM mode, brackets in code still count.
+     * In all other modes, they donâ€™t.  This empty
+     * block prevents the next statements are
+     * entered. */
+    } else if ((!opening || gfm) &amp;&amp; character === C_BRACKET_OPEN) {
+      depth++;
+    } else if ((!opening || gfm) &amp;&amp; character === C_BRACKET_CLOSE) {
+      if (depth) {
+        depth--;
+      } else {
+        /* Allow white-space between content and
+         * url in GFM mode. */
+        if (gfm) {
+          while (index &lt; length) {
+            character = value.charAt(index + 1);
+
+            if (!whitespace(character)) {
+              break;
+            }
+
+            subqueue += character;
+            index++;
+          }
+        }
+
+        if (value.charAt(index + 1) !== C_PAREN_OPEN) {
+          return;
+        }
+
+        subqueue += C_PAREN_OPEN;
+        closed = true;
+        index++;
+
+        break;
+      }
+    }
+
+    queue += subqueue;
+    subqueue = '';
+    index++;
+  }
+
+  /* Eat the content closing. */
+  if (!closed) {
+    return;
+  }
+
+  content = queue;
+  subvalue += queue + subqueue;
+  index++;
+
+  /* Eat white-space. */
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (!whitespace(character)) {
+      break;
+    }
+
+    subvalue += character;
+    index++;
+  }
+
+  /* Eat the URL. */
+  character = value.charAt(index);
+  markers = commonmark ? COMMONMARK_LINK_MARKERS : LINK_MARKERS;
+  queue = '';
+  beforeURL = subvalue;
+
+  if (character === C_LT) {
+    index++;
+    beforeURL += C_LT;
+
+    while (index &lt; length) {
+      character = value.charAt(index);
+
+      if (character === C_GT) {
+        break;
+      }
+
+      if (commonmark &amp;&amp; character === '\n') {
+        return;
+      }
+
+      queue += character;
+      index++;
+    }
+
+    if (value.charAt(index) !== C_GT) {
+      return;
+    }
+
+    subvalue += C_LT + queue + C_GT;
+    url = queue;
+    index++;
+  } else {
+    character = null;
+    subqueue = '';
+
+    while (index &lt; length) {
+      character = value.charAt(index);
+
+      if (subqueue &amp;&amp; has(markers, character)) {
+        break;
+      }
+
+      if (whitespace(character)) {
+        if (commonmark) {
+          break;
+        }
+
+        subqueue += character;
+      } else {
+        if (character === C_PAREN_OPEN) {
+          depth++;
+        } else if (character === C_PAREN_CLOSE) {
+          if (depth === 0) {
+            break;
+          }
+
+          depth--;
+        }
+
+        queue += subqueue;
+        subqueue = '';
+
+        if (character === C_BACKSLASH) {
+          queue += C_BACKSLASH; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.reference" id="apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.reference">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>reference
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reference(eat, value, silent) {
+  var self = this;
+  var character = value.charAt(0);
+  var index = 0;
+  var length = value.length;
+  var subvalue = '';
+  var intro = '';
+  var type = T_LINK;
+  var referenceType = REFERENCE_TYPE_SHORTCUT;
+  var content;
+  var identifier;
+  var now;
+  var node;
+  var exit;
+  var queue;
+  var bracketed;
+  var depth;
+
+<span class="apidocCodeCommentSpan">  /* Check whether weâ€™re eating an image. */
+</span>  if (character === '!') {
+    type = T_IMAGE;
+    intro = character;
+    character = value.charAt(++index);
+  }
+
+  if (character !== C_BRACKET_OPEN) {
+    return;
+  }
+
+  index++;
+  intro += character;
+  queue = '';
+
+  /* Check whether weâ€™re eating a footnote. */
+  if (
+    self.options.footnotes &amp;&amp;
+    type === T_LINK &amp;&amp;
+    value.charAt(index) === C_CARET
+  ) {
+    intro += C_CARET;
+    index++;
+    type = T_FOOTNOTE;
+  }
+
+  /* Eat the text. */
+  depth = 0;
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (character === C_BRACKET_OPEN) {
+      bracketed = true;
+      depth++;
+    } else if (character === C_BRACKET_CLOSE) {
+      if (!depth) {
+        break;
+      }
+
+      depth--;
+    }
+
+    if (character === C_BACKSLASH) {
+      queue += C_BACKSLASH;
+      character = value.charAt(++index);
+    }
+
+    queue += character;
+    index++;
+  }
+
+  subvalue = content = queue;
+  character = value.charAt(index);
+
+  if (character !== C_BRACKET_CLOSE) {
+    return;
+  }
+
+  index++;
+  subvalue += character;
+  queue = '';
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (!whitespace(character)) {
+      break;
+    }
+
+    queue += character;
+    index++;
+  }
+
+  character = value.charAt(index);
+
+  if (character === C_BRACKET_OPEN) {
+    identifier = '';
+    queue += character;
+    index++;
+
+    while (index &lt; length) {
+      character = value.charAt(index);
+
+      if (character === C_BRACKET_OPEN || character === C_BRACKET_CLOSE) {
+        break;
+      }
+
+      if (character === C_BACKSLASH) {
+        identifier += C_BACKSLASH;
+        character = value.charAt(++index);
+      }
+
+      identifier += character;
+      index++;
+    }
+
+    character = value.charAt(index);
+
+    if (character === C_BRACKET_CLOSE) {
+      referenceType = identifier ? REFERENCE_TYPE_FULL : REFERENCE_TYPE_COLLAPSED;
+      queue += identifier + character;
+      index++;
+    } else {
+      identifier = '';
+    }
+
+    subvalue += queue;
+    queue = '';
+  } else {
+    if (!content) {
+      return;
+    }
+
+    identifier = content;
+  }
+
+  /* Brackets cannot be inside the identifier. */
+  if (referenceType !== REFERENCE_TYPE_FULL &amp;&amp; bracketed) {
+    return;
+  }
+
+  /* Inline footnotes cannot have an identifier. */
+  if (type === T_FOOTNOTE &amp;&amp; referenceType !== REFERENCE_TYPE_SHORTCUT) {
+    type = T_LINK;
+    intro = C_BRACKET_OPEN + C_CARET;
+    content = C_CARET + content;
+  }
+
+  subvalue = intro + subvalue;
+
+  if (type === T_LINK &amp;&amp; self.inLink) {
+    return null;
+  }
+
+  /* istanbul ignore if - never used (yet) */
+  if (silent) {
+    return true;
+  }
+
+  if (type === T_FOOTNOTE &amp;&amp; content.indexOf(' ') !== -1) {
+    return eat(subvalue)({
+      type: 'footnote',
+      children: this.tokenizeInline(content, eat.now())
+    });
+  }
+
+  now = eat.now();
+  now.column += intro.length;
+  now.offset += intro.length;
+  identifier = referenceType === REFERENCE_TYPE_FULL ? identifier : content;
+
+  node = {
+    type: type + 'Reference',
+    identifier: normalize(identifier)
+  };
+
+  if (type === T_LINK || type === T_IMAGE) {
+    node.referenceType = referenceType;
+  }
+
+  if (type === T_LINK) {
+    exit = self.enterLink();
+    node.children = self.tokenizeInline(content, now);
+    exit();
+  } else if (type === T_IMAGE) {
+    node.alt = self.decode.raw(self.unescape(content), now) || null;
+  }
+
+  return eat(subvalue)(node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.strong" id="apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.strong">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>strong
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function strong(eat, value, silent) {
+  var self = this;
+  var index = 0;
+  var character = value.charAt(index);
+  var now;
+  var pedantic;
+  var marker;
+  var queue;
+  var subvalue;
+  var length;
+  var prev;
+
+  if (
+    (character !== C_ASTERISK &amp;&amp; character !== C_UNDERSCORE) ||
+    value.charAt(++index) !== character
+  ) {
+    return;
+  }
+
+  pedantic = self.options.pedantic;
+  marker = character;
+  subvalue = marker + marker;
+  length = value.length;
+  index++;
+  queue = character = '';
+
+  if (pedantic &amp;&amp; whitespace(value.charAt(index))) {
+    return;
+  }
+
+  while (index &lt; length) {
+    prev = character;
+    character = value.charAt(index);
+
+    if (
+      character === marker &amp;&amp;
+      value.charAt(index + 1) === marker &amp;&amp;
+      (!pedantic || !whitespace(prev))
+    ) {
+      character = value.charAt(index + 2);
+
+      if (character !== marker) {
+        if (!trim(queue)) {
+          return;
+        }
+
+<span class="apidocCodeCommentSpan">        /* istanbul ignore if - never used (yet) */
+</span>        if (silent) {
+          return true;
+        }
+
+        now = eat.now();
+        now.column += 2;
+        now.offset += 2;
+
+        return eat(subvalue + queue + subvalue)({
+          type: 'strong',
+          children: self.tokenizeInline(queue, now)
+        });
+      }
+    }
+
+    if (!pedantic &amp;&amp; character === '\\') {
+      queue += character;
+      character = value.charAt(++index);
+    }
+
+    queue += character;
+    index++;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.text" id="apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.text">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>text
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function text(eat, value, silent) {
+  var self = this;
+  var methods;
+  var tokenizers;
+  var index;
+  var length;
+  var subvalue;
+  var position;
+  var tokenizer;
+  var name;
+  var min;
+  var now;
+
+<span class="apidocCodeCommentSpan">  /* istanbul ignore if - never used (yet) */
+</span>  if (silent) {
+    return true;
+  }
+
+  methods = self.inlineMethods;
+  length = methods.length;
+  tokenizers = self.inlineTokenizers;
+  index = -1;
+  min = value.length;
+
+  while (++index &lt; length) {
+    name = methods[index];
+
+    if (name === 'text' || !tokenizers[name]) {
+      continue;
+    }
+
+    tokenizer = tokenizers[name].locator;
+
+    if (!tokenizer) {
+      eat.file.fail('Missing locator: `' + name + '`');
+    }
+
+    position = tokenizer.call(self, value, 1);
+
+    if (position !== -1 &amp;&amp; position &lt; min) {
+      min = position;
+    }
+  }
+
+  subvalue = value.slice(0, min);
+  now = eat.now();
+
+  self.decode(subvalue, now, function (content, position, source) {
+    eat(source || content)({
+      type: 'text',
+      value: content
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.url" id="apidoc.element.remark.Parser.super_.prototype.inlineTokenizers.url">
+        function <span class="apidocSignatureSpan">remark.Parser.super_.prototype.inlineTokenizers.</span>url
+        <span class="apidocSignatureSpan">(eat, value, silent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function url(eat, value, silent) {
+  var self = this;
+  var subvalue;
+  var content;
+  var character;
+  var index;
+  var position;
+  var protocol;
+  var match;
+  var length;
+  var queue;
+  var parenCount;
+  var nextCharacter;
+  var exit;
+
+  if (!self.options.gfm) {
+    return;
+  }
+
+  subvalue = '';
+  index = -1;
+  length = PROTOCOLS_LENGTH;
+
+  while (++index &lt; length) {
+    protocol = PROTOCOLS[index];
+    match = value.slice(0, protocol.length);
+
+    if (match.toLowerCase() === protocol) {
+      subvalue = match;
+      break;
+    }
+  }
+
+  if (!subvalue) {
+    return;
+  }
+
+  index = subvalue.length;
+  length = value.length;
+  queue = '';
+  parenCount = 0;
+
+  while (index &lt; length) {
+    character = value.charAt(index);
+
+    if (whitespace(character) || character === C_LT) {
+      break;
+    }
+
+    if (
+      character === '.' ||
+      character === ',' ||
+      character === ':' ||
+      character === ';' ||
+      character === '"' ||
+      character === '\'' ||
+      character === ')' ||
+      character === ']'
+    ) {
+      nextCharacter = value.charAt(index + 1);
+
+      if (!nextCharacter || whitespace(nextCharacter)) {
+        break;
+      }
+    }
+
+    if (character === C_PAREN_OPEN || character === C_BRACKET_OPEN) {
+      parenCount++;
+    }
+
+    if (character === C_PAREN_CLOSE || character === C_BRACKET_CLOSE) {
+      parenCount--;
+
+      if (parenCount &lt; 0) {
+        break;
+      }
+    }
+
+    queue += character;
+    index++;
+  }
+
+  if (!queue) {
+    return;
+  }
+
+  subvalue += queue;
+  content = subvalue;
+
+  if (protocol === MAILTO_PROTOCOL) {
+    position = queue.indexOf(C_AT_SIGN);
+
+    if (position === -1 || position === length - 1) {
+      return;
+    }
+
+    content = content.substr(MAILTO_PROTOCOL.length);
+  }
+
+<span class="apidocCodeCommentSpan">  /* istanbul ignore if - never used (yet) */
+</span>  if (silent) {
+    return true;
+  }
+
+  exit = self.enterLink();
+  content = self.tokenizeInline(content, eat.now());
+  exit();
+
+  return eat(subvalue)({
+    type: 'link',
+    title: null,
+    url: decode(subvalue),
+    children: content
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
