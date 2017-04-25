@@ -1,6 +1,6 @@
 # npmdoc-remark
 
-#### api documentation for  [remark (v7.0.0)](http://remark.js.org)  [![npm package](https://img.shields.io/npm/v/npmdoc-remark.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-remark) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-remark.svg)](https://travis-ci.org/npmdoc/node-npmdoc-remark)
+#### basic api documentation for  [remark (v7.0.0)](http://remark.js.org)  [![npm package](https://img.shields.io/npm/v/npmdoc-remark.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-remark) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-remark.svg)](https://travis-ci.org/npmdoc/node-npmdoc-remark)
 
 #### Markdown processor powered by plugins
 
@@ -21,10 +21,35 @@
 ```json
 
 {
-    "name": "remark",
-    "version": "7.0.0",
+    "author": {
+        "name": "Titus Wormer",
+        "url": "http://wooorm.com"
+    },
+    "bugs": {
+        "url": "https://github.com/wooorm/remark/issues"
+    },
+    "contributors": [
+        {
+            "name": "Titus Wormer",
+            "url": "http://wooorm.com"
+        }
+    ],
+    "dependencies": {
+        "remark-parse": "^3.0.0",
+        "remark-stringify": "^3.0.0",
+        "unified": "^6.0.0"
+    },
     "description": "Markdown processor powered by plugins",
-    "license": "MIT",
+    "devDependencies": {},
+    "directories": {},
+    "dist": {
+        "shasum": "ce9c788c390d98d9a67cb7738e98246732e79144",
+        "tarball": "https://registry.npmjs.org/remark/-/remark-7.0.0.tgz"
+    },
+    "files": [
+        "index.js"
+    ],
+    "homepage": "http://remark.js.org",
     "keywords": [
         "markdown",
         "abstract",
@@ -35,23 +60,22 @@
         "stringify",
         "process"
     ],
-    "dependencies": {
-        "remark-parse": "^3.0.0",
-        "remark-stringify": "^3.0.0",
-        "unified": "^6.0.0"
+    "license": "MIT",
+    "maintainers": [
+        {
+            "name": "wooorm"
+        }
+    ],
+    "name": "remark",
+    "optionalDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wooorm/remark/tree/master/packages/remark"
     },
-    "homepage": "http://remark.js.org",
-    "repository": "https://github.com/wooorm/remark/tree/master/packages/remark",
-    "bugs": "https://github.com/wooorm/remark/issues",
-    "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
-    "contributors": [
-        "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
-    ],
-    "files": [
-        "index.js"
-    ],
     "scripts": {},
-    "xo": false
+    "version": "7.0.0",
+    "xo": false,
+    "bin": {}
 }
 ```
 
